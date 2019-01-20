@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import  Menu from './menu';
-import Home from './home';
+import Relatorio from './relatorio';
 import './App.css';
 
 
@@ -11,7 +11,7 @@ class App extends Component {
         
         <div>
           <Menu/>
-          <Home/>
+          <Relatorio/>
         </div>
 
      

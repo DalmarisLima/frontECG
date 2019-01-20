@@ -20,7 +20,7 @@ export default class Pag extends React.Component {
     render() {
         return (
 
-            <Menu
+            <Menu 
                 onClick={this.handleClick}
                 selectedKeys={[this.state.current]}
                 mode="horizontal">
