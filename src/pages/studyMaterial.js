@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Skeleton} from 'antd';
-import Ques from './questoes';
+import Ques from '../components/quetions';
 
 const tabList = [{
     key: 'tab1',

@@ -1,42 +1,43 @@
 import React from 'react';
-import { Card } from 'antd';
-import Calendar from './calendar';
+import { Card, Skeleton} from 'antd';
 
-const tablis = [{
+const tabList = [{
     key: 'tab1',
-    tab: 'Feed Notícias',
+    tab: 'Perfil',
 }, {
     key: 'tab2',
-    tab: 'Próximos Eventos'
-}];
+    tab: 'Conquistas',
+}, {
+    key: 'tab3',
+    tab: 'Ranking',
 
+}];
 const contentList = {
-    tab1: <p>Alguma coisa</p>,
-    tab2: <Calendar />
+    tab1:  <Skeleton/>,
+    tab2: <Skeleton/>,
+    tab3:   <Skeleton/>,
 };
 
-export default class Home extends React.Component {
+export default class StudyMaterial extends React.Component {
     state = {
-        key: 'tab1',
+        key: 'tab1'
     }
-
     onTabChange = (key, type) => {
         console.log(key, type);
-        this.setState({ [type]: key })
+        this.setState({ [type]: key });
     }
-
     render() {
         return (
             <div>
                 <Card
                     style={{ width: '100%', marginTop: "70px"}}
-                    title='Início'
-                    tabList={tablis}
+                    title="Ranking"
+                    tabList={tabList}
                     activeTabKey={this.state.key}
                     onTabChange={(key) => { this.onTabChange(key, 'key'); }}>
                     {contentList[this.state.key]}
                 </Card>
             </div>
-        );
+        )
     }
 }
