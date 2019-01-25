@@ -10,7 +10,6 @@ import "./App.css";
 const App = () => (
   <div>
     <Menu />
-
     <Route path="/" exact component={Home} />
     <Route path="/ranking" exact component={Ranking} />
     <Route path="/report" exact component={Report} />
