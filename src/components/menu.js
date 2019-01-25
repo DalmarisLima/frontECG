@@ -37,7 +37,6 @@ export default class Pag extends React.Component {
           title={
             <span className="submenu-title-wrapper">
               <Icon type="snippets" />
-
               <Link to="./matstudy">Material de Estudos</Link>
             </span>
           }
