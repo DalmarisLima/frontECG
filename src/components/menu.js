@@ -70,9 +70,7 @@ export default class Pag extends React.Component {
         <SubMenu
           title={
             <span className="submenu-title-wrapper">
-              <Icon type="area-chart" />
-
-              <Link to="./Report">Relatório</Link>
+            <Link to="./Report"><Icon type="area-chart" /></Link>              
             </span>
           }
         >
