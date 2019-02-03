@@ -1,21 +1,22 @@
 import React from 'react';
 import { Card, Skeleton} from 'antd';
+import ListRanking from '../components/listRanking';
 
 const tabList = [{
     key: 'tab1',
-    tab: 'Perfil',
+    tab: 'Ranking',
 }, {
     key: 'tab2',
     tab: 'Conquistas',
 }, {
     key: 'tab3',
-    tab: 'Ranking',
+    tab: 'Perfil',
 
 }];
 const contentList = {
-    tab1:  <Skeleton/>,
-    tab2: <Skeleton/>,
-    tab3:   <Skeleton/>,
+    tab1:  <ListRanking/>,
+    tab2: <Skeleton/> ,
+    tab3: <Skeleton/> ,
 };
 
 export default class StudyMaterial extends React.Component {

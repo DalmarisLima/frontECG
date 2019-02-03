@@ -11,6 +11,6 @@ const {
     }),
     addLessLoader({
       javascriptEnabled: true,
-      modifyVars: { "@primary-color": "#6CB6C9" }
+      modifyVars: { '@primary-color': '#6CB6C9' }
     })
   );

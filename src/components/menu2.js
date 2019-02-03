@@ -1,8 +1,7 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout, Menu, Icon, Avatar, Badge } from 'antd';
 import { Link } from "react-router-dom";
 import { Route } from "react-router-dom";
-import Menu1 from "./menu";
 import Report from "../pages/report";
 import Home from "../pages/home";
 import StudyMaterial from "../pages/studyMaterial";
@@ -33,7 +32,7 @@ export default class Primary extends React.Component {
                     onCollapse={this.onCollapse}
                 >
                     <div className="logo" />
-                    <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+                    <Menu theme="dark" menu-dark-bg='#6CB6C9' defaultSelectedKeys={['1']} mode="inline">
                         <Menu.Item key="1">
                             <Icon type="home" />
                             <span>Início</span>
