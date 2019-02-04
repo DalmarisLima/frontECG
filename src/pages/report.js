@@ -1,8 +1,7 @@
 import React from 'react';
 import { Card, Skeleton} from 'antd';
 import Graphic from '../components/graphic';
-import Tab from '../components/table';
-import { Container } from 'react-bootstrap';
+import Tab from '../components/tableReport';
 
 const tabList = [{
     key: 'tab1',  
@@ -13,7 +12,7 @@ const tabList = [{
 }];
 const contentList = {
     tab1:  <Tab/>,
-    tab2: <Container><Graphic/></Container> 
+    tab2: <div><Graphic/></div> 
 };
 
 export default class Reports extends React.Component {

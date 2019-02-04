@@ -16,10 +16,8 @@ const tabList = [{
 }];
 const contentList = {
     tab1:  <Skeleton/>,
-    tab2: <Container>
-    <iframe width="500" height="400" controls style={{ marginLeft: '250px' }} src="https://www.youtube.com/embed/vLdPL3xvq3M">
-    </iframe>
-    </Container>,
+    tab2: <div className="w3-container"><iframe width="500" height="400" controls style={{ marginLeft: '250px' }} src="https://www.youtube.com/embed/vLdPL3xvq3M">
+    </iframe></div>,
     tab3: <div><Ques/></div>,
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'antd';
 import Calendar from '../components/calendar';
+import Tree from '../components/tree';
 
 const tablis = [{
     key: 'tab1',
@@ -11,7 +12,7 @@ const tablis = [{
 }];
 
 const contentList = {
-    tab1: <p>Alguma coisa</p>,
+    tab1: <Tree/>,
     tab2: <Calendar/>
 };
 

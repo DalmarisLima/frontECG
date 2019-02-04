@@ -18,7 +18,7 @@ export default class grafico extends Component {
   render() {
     return (
 
-      <Container>
+      <div className="w3-container">
         <LineChart
           width={1000}
           height={300}
@@ -37,7 +37,7 @@ export default class grafico extends Component {
           <XAxis dataKey='name' />
           <Legend />
         </LineChart>
-      </Container>
+      </div>
 
     );
   }

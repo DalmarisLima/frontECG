@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Skeleton} from 'antd';
 import ListRanking from '../components/listRanking';
+import Table from '../components/tableRanking';
+
 
 const tabList = [{
     key: 'tab1',
@@ -15,7 +17,7 @@ const tabList = [{
 }];
 const contentList = {
     tab1:  <ListRanking/>,
-    tab2: <Skeleton/> ,
+    tab2: <Table/> ,
     tab3: <Skeleton/> ,
 };
 
