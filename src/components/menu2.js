@@ -36,7 +36,7 @@ export default class Primary extends React.Component {
                         <Menu.Item key="1">
                             <Icon type="home" />
                             <span>Início</span>
-                            <Link to="./">Início</Link>
+                            <Link to="./"></Link>
                         </Menu.Item>
                         <Menu.Item key="2">
                             <Icon type="trophy" />
