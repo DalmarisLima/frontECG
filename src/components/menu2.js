@@ -38,11 +38,16 @@ export default class Primary extends React.Component {
                             <span>Início</span>
                             <Link to="./"></Link>
                         </Menu.Item>
-                        <Menu.Item key="2">
-                            <Icon type="trophy" />
-                            <span>Ranking</span>
-                            <Link to="./Ranking" />
-                        </Menu.Item>
+                        <Menu.Item key="8">
+                            <Icon type="user" />
+                            <span>Perfil</span>
+                            <Link to="./" />
+                            </Menu.Item>
+                            <Menu.Item key="2">
+                                <Icon type="trophy" />
+                                <span>Ranking</span>
+                                <Link to="./Ranking" />
+                            </Menu.Item>
                         <SubMenu
                             key="sub1"
                             title={<span> <Icon type="snippets" />

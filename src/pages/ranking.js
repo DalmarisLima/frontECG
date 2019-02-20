@@ -10,10 +10,6 @@ const tabList = [{
 }, {
     key: 'tab2',
     tab: 'Conquistas',
-}, {
-    key: 'tab3',
-    tab: 'Perfil',
-
 }];
 const contentList = {
     tab1:  <ListRanking/>,
