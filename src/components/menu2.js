@@ -1,5 +1,6 @@
 import React from 'react';
-import { Layout, Menu, Icon, Avatar, Badge } from 'antd';
+import { Layout, Menu, Icon, Progress, Badge } from 'antd';
+import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Report from "../pages/report";
@@ -89,7 +90,14 @@ export default class Primary extends React.Component {
                 </Sider>
                 <Layout>
                     <Header style={{ background: '#fff', padding: 0 }} >
-                        dala
+                        <Grid item container xs={2} alignItems="flex-end" direction="column" spacing={0} style={{ marginLeft: '900px', marginTop: '23px' }}>
+                            <Progress 
+                            status="active" 
+                            strokeColor='#6CB6C9'
+                            strokeWidth = "20px" 
+                            showInfo= 'false'
+                            percent={20} />
+                        </Grid>
                     </Header>
 
                     <Content style={{ margin: '0 16px' }}>
