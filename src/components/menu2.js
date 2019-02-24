@@ -94,7 +94,7 @@ export default class Primary extends React.Component {
                             <Progress 
                             status="active" 
                             strokeColor='#6CB6C9'
-                            strokeWidth = "20px" 
+                            strokeWidth = "25px" 
                             showInfo= 'false'
                             percent={20} />
                         </Grid>
