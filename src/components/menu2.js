@@ -7,6 +7,7 @@ import Report from "../pages/report";
 import Home from "../pages/home";
 import StudyMaterial from "../pages/studyMaterial";
 import Ranking from "../pages/ranking";
+import User from "../components/user";
 
 
 const {
@@ -33,15 +34,13 @@ export default class Primary extends React.Component {
                     onCollapse={this.onCollapse}>
                     <div style={{ position: 'center' }} >ECG TUTOR</div>
                     <Menu theme="dark" menu-dark-bg='#6CB6C9' defaultSelectedKeys={['1']} mode="inline">
-                        <Menu.Item key="1">
+                    
+                        <User/>
+                    
+                        <Menu.Item key="2">
                             <Icon type="home" />
                             <span>Início</span>
                             <Link to="./"></Link>
-                        </Menu.Item>
-                        <Menu.Item key="2">
-                            <Icon type="smile" />
-                            <span>Perfil</span>
-                            <Link to="./" />
                         </Menu.Item>
                         <Menu.Item key="3">
                             <Icon type="trophy" />
@@ -96,7 +95,7 @@ export default class Primary extends React.Component {
                             strokeColor='#6CB6C9'
                             strokeWidth = "25px" 
                             showInfo= 'false'
-                            percent={20} />
+                            percent={50} />
                         </Grid>
                     </Header>
 
@@ -110,7 +109,7 @@ export default class Primary extends React.Component {
                         </div>
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
-                        Copyright 2019- ECG Tutor
+                        Copyright 2019- ECG TUTOR
           </Footer>
                 </Layout>
             </Layout>

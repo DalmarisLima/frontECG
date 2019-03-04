@@ -31,7 +31,7 @@ function getListData(value) {
   
   function getMonthData(value) {
     if (value.month() === 8) {
-      return 1394;
+      return;
     }
   }
   
@@ -48,7 +48,7 @@ function getListData(value) {
   export default class calendar extends React.Component{
       render(){
           return(
-                <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />   
+                <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} fullscreen="false" />   
           );
       }
   }
