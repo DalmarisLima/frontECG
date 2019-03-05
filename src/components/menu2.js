@@ -1,6 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Icon, Progress, Badge } from 'antd';
-import Grid from '@material-ui/core/Grid';
+import { Layout, Menu, Icon, Progress, Row, Col, Typography } from 'antd';
 import { Link } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Report from "../pages/report";
@@ -10,10 +9,9 @@ import Ranking from "../pages/ranking";
 import User from "../components/user";
 
 
-const {
-    Header, Content, Footer, Sider,
-} = Layout;
+const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
+const { Title } = Typography;
 
 export default class Primary extends React.Component {
     state = {
@@ -32,11 +30,8 @@ export default class Primary extends React.Component {
                     collapsible
                     collapsed={this.state.collapsed}
                     onCollapse={this.onCollapse}>
-                    <div style={{ position: 'center' }} >ECG TUTOR</div>
                     <Menu theme="dark" menu-dark-bg='#6CB6C9' defaultSelectedKeys={['1']} mode="inline">
-                    
-                        <User/>
-                    
+
                         <Menu.Item key="2">
                             <Icon type="home" />
                             <span>Início</span>
@@ -89,16 +84,26 @@ export default class Primary extends React.Component {
                 </Sider>
                 <Layout>
                     <Header style={{ background: '#fff', padding: 0 }} >
-                        <Grid item container xs={2} alignItems="flex-end" direction="column" spacing={0} style={{ marginLeft: '900px', marginTop: '23px' }}>
-                            <Progress 
-                            status="active" 
-                            strokeColor='#6CB6C9'
-                            strokeWidth = "25px" 
-                            showInfo= 'false'
-                            percent={50} />
-                        </Grid>
-                    </Header>
+                        <div>
+                            <Row>
+                                <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6 }} >
+                                    <Title level={2} style={{ marginTop: 5 }}>LOGO</Title>
+                                </Col>
+                                <Col xs={{ span: 4, offset: 3 }} lg={{ span: 4, offset: 6 }}  >
+                                    <User />
+                                </Col>
+                                <Col xs={{ span: 4, offset: 2 }} lg={{ span: 4, offset: 2 }}>
+                                    <Progress
+                                        status="active"
+                                        strokeColor='#6CB6C9'
+                                        strokeWidth="25px"
+                                        showInfo={false}
+                                        percent={50} />
+                                </Col>
+                            </Row>
+                        </div>
 
+                    </Header>
                     <Content style={{ margin: '0 16px' }}>
                         <div>
                             <Menu />
