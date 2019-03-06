@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Button } from 'antd';
+import { Avatar, Rate } from 'antd';
 
 
 const UserList = ['Dr. Baby', 'Dr. Teen', 'Dr. Expert'];

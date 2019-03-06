@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Progress } from 'antd';
+import { Progress, Row, Col } from 'antd';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -14,39 +14,55 @@ const styles = {
 function PositionedTooltips(props) {
   const { classes } = props;
   return (
-    <div className={classes.root} controls style={{ marginLeft: '275px' }}>
-      <Grid container justify="center">
-        <Grid item>
+    <div>
+      <Row>
+        <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}></Col>
+        <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+          <Progress
+            type="circle"
+            percent={100} format={() => 'Assunto 1'}
+            width='100px'
+            strokeWidth='10' />
+        </Col>
+        <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}></Col>
+      </Row>
 
-          <Progress type="circle" percent={100} />
+    
+      <Row>
+        <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+          <Progress
+            type="circle"
+            percent={20} format={() => 'Assunto 2'}
+            width='100px'
+            strokeColor='#6CB6C9'
+            strokeWidth='10' />
+        </Col>
+        <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}></Col>
+        <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+          <Progress
+            type="circle"
+            percent={0} format={() => 'Assunto 3'}
+            width='100px'
+            strokeWidth='10' />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}></Col>
+        <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+          <Progress
+            type="circle"
+            percent={0} format={() => 'Assunto 4'}
+            width='100px'
+            strokeWidth='10' />
+        </Col>
+        <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}></Col>
+      </Row>
 
 
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item xs={6}>
 
-          <Progress type="circle" percent={0} />
-
-        </Grid>
-        <Grid item container xs={6} alignItems="flex-end" direction="column" spacing={0}>
-          <Grid item>
-
-            <Progress type="circle" percent={0} />
-
-          </Grid>
-          
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item>
-
-        <Progress type="circle" percent={0} />
-
-
-        </Grid>
-      </Grid>
     </div>
+
   );
 }
 
