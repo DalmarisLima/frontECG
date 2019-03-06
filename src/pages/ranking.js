@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Skeleton} from 'antd';
+import { Card, Skeleton, Row, Col} from 'antd';
 import ListRanking from '../components/listRanking';
 import Table from '../components/tableRanking';
 
@@ -12,9 +12,8 @@ const tabList = [{
     tab: 'Conquistas',
 }];
 const contentList = {
-    tab1:  <ListRanking/>,
+    tab1: <ListRanking/>,
     tab2: <Table/> ,
-    tab3: <Skeleton/> ,
 };
 
 export default class StudyMaterial extends React.Component {
