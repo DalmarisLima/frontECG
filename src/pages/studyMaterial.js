@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Skeleton} from 'antd';
 import Ques from '../components/quetions';
-import { Container } from 'react-bootstrap';
+import Video from '../components/video'
 
 const tabList = [{
     key: 'tab1',
@@ -16,8 +16,7 @@ const tabList = [{
 }];
 const contentList = {
     tab1:  <Skeleton/>,
-    tab2: <div className="w3-container"><iframe width="500" height="400" controls style={{ marginLeft: '250px' }} src="https://www.youtube.com/embed/vLdPL3xvq3M">
-    </iframe></div>,
+    tab2:<Video/>,
     tab3: <div><Ques/></div>,
 };
 

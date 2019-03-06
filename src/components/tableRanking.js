@@ -27,7 +27,7 @@ const data = [{
      render(){
          return(
              <div>
-                 <Table columns = {columns} dataSource ={data} size = "middle"/>
+                 <Table pagination={false} columns = {columns} dataSource ={data} size = "middle"/>
              </div>
          )
      }

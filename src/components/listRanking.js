@@ -1,28 +1,7 @@
 import React from 'react';
 import {Statistic, Card, Row, Col, Icon, Avatar, Table } from 'antd';
+import Tabela from './tableRanking';
 
-const columns = [{
-  title: 'Troféus',
-  dataIndex: 'trofeus',
-}, {
-  title: 'Medalhas',
-  dataIndex: 'medalhas',
-
-}];
-
-const data = [{
-  key: '1',
-  assuntos: 'Assunto 1',
-  texto: 'Texto 1',
-  video: 'Vídeo 1',
-  praticar: 'Pratica 1',
-},{
-  key: '2',
-  assuntos: 'Assunto 2',
-  texto: 'Texto 2',
-  video: 'Vídeo 2',
-  praticar: 'Praticar 2',
-}];
 
 
 export default class ListRanking extends React.Component{
@@ -50,7 +29,7 @@ export default class ListRanking extends React.Component{
             <Col span={18}>
               <Card>
               <div>
-                 <Table pagination= {false} columns = {columns} dataSource ={data} size = "middle"/>
+                 <Tabela/>
              </div>
               </Card>
             </Col>
