@@ -2,8 +2,10 @@ import React from 'react';
 import { Avatar, Rate } from 'antd';
 
 
-const UserList = ['Dr. Baby', 'Dr. Teen', 'Dr. Expert'];
-const colorList = ['#4682B4', '#228B22', '#DC143C'];
+const UserList = [
+<Avatar src="https://img.icons8.com/office/40/000000/babys-room.png" />,
+<Avatar src="https://img.icons8.com/office/40/000000/doctor-female.png" />,
+<Avatar src="https://img.icons8.com/office/40/000000/doctor-male.png" />];
 
 
 export default class User extends React.Component {
@@ -11,7 +13,7 @@ export default class User extends React.Component {
         super(props);
         this.state = {
             user: UserList[0],
-            color: colorList[0],
+
         };
     }
 
@@ -19,13 +21,13 @@ export default class User extends React.Component {
         const index = UserList.indexOf(this.state.user);
         this.setState({
             user: index < UserList.length - 1 ? UserList[index + 1] : UserList[0],
-            color: index < colorList.length - 1 ? colorList[index + 1] : colorList[0],
+
         });
     }
     render() {
         return (
             <div>
-                <Avatar style={{ backgroundColor: this.state.color, verticalAlign: 'middle'}} size='large' onClick={this.changeUser}>
+                <Avatar style={{ verticalAlign: 'middle' }} size='large' onClick={this.changeUser}>
                     {this.state.user}
                 </Avatar> Dr. Usuário
             </div>

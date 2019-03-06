@@ -87,7 +87,7 @@ export default class Primary extends React.Component {
                         <div>
                             <Row>
                                 <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6 }} >
-                                    <Title level={2} style={{ marginTop: 5 }}>LOGO</Title>
+                                    <Title level={2} style={{ marginTop: 10 }}>LOGO</Title>
                                 </Col>
                                 <Col xs={{ span: 4, offset: 3 }} lg={{ span: 4, offset: 6 }}  >
                                     <User />

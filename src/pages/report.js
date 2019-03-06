@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Skeleton} from 'antd';
+import { Card } from 'antd';
 import Graphic from '../components/graphic';
 import Tab from '../components/tableReport';
 
