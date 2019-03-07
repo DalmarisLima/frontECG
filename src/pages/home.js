@@ -1,18 +1,18 @@
 import React from 'react';
 import { Card } from 'antd';
 import Calendar from '../components/calendar';
-import Tree from '../components/tree';
+import Teste from '../components/teste';
 
 const tablis = [{
     key: 'tab1',
-    tab: 'Feed Notícias',
+    tab: 'Feed Notícias'
 }, {
-    key: 'tab2',
-    tab: 'Próximos Eventos'
+        key: 'tab2',
+        tab: 'Conquistas',
 }];
 
 const contentList = {
-    tab1: <Tree/>,
+    tab1: <Teste/>,
     tab2: <Calendar/>
 };
 
@@ -30,7 +30,7 @@ export default class Home extends React.Component {
         return (
             <div>
                 <Card
-                    style={{ width: '100%', marginTop: "70px"}}
+                    style={{ width: '100%', marginTop: "70px" }}
                     title='Início'
                     tabList={tablis}
                     activeTabKey={this.state.key}
