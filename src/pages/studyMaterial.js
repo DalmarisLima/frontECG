@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, Skeleton} from 'antd';
 import Ques from '../components/quetions';
-import Video from '../components/video'
+import Video from '../components/video';
+import Text from '../components/text';
 
 const tabList = [{
     key: 'tab1',
@@ -15,9 +16,9 @@ const tabList = [{
 
 }];
 const contentList = {
-    tab1:  <Skeleton/>,
+    tab1: <Text/>,
     tab2:<Video/>,
-    tab3: <div><Ques/></div>,
+    tab3: <Ques/>,
 };
 
 export default class StudyMaterial extends React.Component {
