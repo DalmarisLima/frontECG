@@ -18,7 +18,21 @@ const listData = []; {
             title: 'Dr. Carlos',
             avatar: "https://img.icons8.com/office/40/000000/babys-room.png", 
             content: 'Completou mais um nível',
-        });
+        }, {
+            title: 'Dr. João',
+            avatar: "https://img.icons8.com/office/40/000000/babys-room.png", 
+            content: 'Completou mais um nível',
+            
+        }, {
+            title: 'Dr. Maria',
+            avatar: "https://img.icons8.com/office/40/000000/doctor-female.png", 
+            content: 'Completou mais um nível',
+        
+    }, {
+        title: 'Dr. Fernanda',
+        avatar: "https://img.icons8.com/office/40/000000/doctor-female.png", 
+        content: 'Completou mais um nível',
+});
 }
 
 export default class InfiniteListExample extends React.Component {
@@ -83,7 +97,7 @@ export default class InfiniteListExample extends React.Component {
                         
                         <List.Item.Meta
                             avatar={<Avatar src={item.avatar} />}
-                            title={<a href={item.href}>{item.title}</a>}
+                            title={item.title}
                             description={item.description}
                         />
                         {item.content}

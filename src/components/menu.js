@@ -85,9 +85,7 @@ export default class Primary extends React.Component {
                             <Menu.Item key="16"><Icon type="logout" /> Sair</Menu.Item>
                         </SubMenu>
                     </Menu>
-                    <Progresso />
                 </Header>
-
                 <Content style={{ margin: '50px' }}>
                     <div>
                         <Menu />

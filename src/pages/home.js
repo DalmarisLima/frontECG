@@ -1,19 +1,20 @@
 import React from 'react';
-import { Card } from 'antd';
+import { Card, Col, Row } from 'antd';
 import Calendar from '../components/calendar';
 import Teste from '../components/teste';
 
 const tablis = [{
     key: 'tab1',
     tab: 'Feed Notícias'
-}, {
-        key: 'tab2',
-        tab: 'Conquistas',
 }];
 
 const contentList = {
-    tab1: <Teste/>,
-    tab2: <Calendar/>
+    tab1: <div>
+         <Row>
+      <Col span={6}><Teste/></Col>
+      <Col span={6} offset={4}>Agenda <Calendar/></Col>
+    </Row>
+    </div>,
 };
 
 export default class Home extends React.Component {
