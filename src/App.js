@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import Menu2 from "./components/menu2";
+import Menu from "./components/menu";
 
 const App = () => (
   <div>
-    <Menu2/>
+    <Menu/>
   </div>
 );
 

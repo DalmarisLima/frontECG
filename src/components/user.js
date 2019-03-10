@@ -1,11 +1,11 @@
 import React from 'react';
-import { Avatar, Rate } from 'antd';
+import { Avatar, Progress } from 'antd';
 
 
 const UserList = [
-<Avatar src="https://img.icons8.com/office/40/000000/babys-room.png" />,
-<Avatar src="https://img.icons8.com/office/40/000000/doctor-female.png" />,
-<Avatar src="https://img.icons8.com/office/40/000000/doctor-male.png" />];
+    <Avatar src="https://img.icons8.com/office/40/000000/babys-room.png" />,
+    <Avatar src="https://img.icons8.com/office/40/000000/doctor-female.png" />,
+    <Avatar src="https://img.icons8.com/office/40/000000/doctor-male.png" />];
 
 
 export default class User extends React.Component {
