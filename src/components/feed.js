@@ -1,9 +1,41 @@
 import React from 'react';
-import { Comment, Icon, Tooltip, Avatar } from 'antd';
+import { List, Avatar, Icon, Comment, Tooltip } from 'antd';
 import moment from 'moment';
 
+const listData = []; {
+    listData.push({
 
-export default class Feed extends React.Component {
+        title: 'Dr. Pedro',
+        avatar: 'https://img.icons8.com/office/40/000000/doctor-male.png',
+        content: 'Resolveu um caso clínico!',
+ }, {
+
+            title: 'Dr. Larissa',
+            avatar: "https://img.icons8.com/office/40/000000/doctor-female.png",
+            
+            content: 'Conquistou uma medalha de ouro!',
+        }, {
+            title: 'Dr. Carlos',
+            avatar: "https://img.icons8.com/office/40/000000/babys-room.png", 
+            content: 'Completou mais um nível',
+        }, {
+            title: 'Dr. João',
+            avatar: "https://img.icons8.com/office/40/000000/babys-room.png", 
+            content: 'Completou mais um nível',
+            
+        }, {
+            title: 'Dr. Maria',
+            avatar: "https://img.icons8.com/office/40/000000/doctor-female.png", 
+            content: 'Completou mais um nível',
+        
+    }, {
+        title: 'Dr. Fernanda',
+        avatar: "https://img.icons8.com/office/40/000000/doctor-female.png", 
+        content: 'Completou mais um nível',
+});
+}
+
+export default class InfiniteListExample extends React.Component {
     state = {
         likes: 0,
         dislikes: 0,
@@ -31,9 +63,9 @@ export default class Feed extends React.Component {
 
         const actions = [
             <span>
-                <Tooltip title='Gostei'>
+                <Tooltip title="Gostei">
                     <Icon
-                        type='like'
+                        type="like"
                         theme={action === 'liked' ? 'filled' : 'outlined'}
                         onClick={this.like}
                     />
@@ -43,9 +75,9 @@ export default class Feed extends React.Component {
                 </span>
             </span>,
             <span>
-                <Tooltip title='Não Gostei'>
+                <Tooltip title="Não Gostei">
                     <Icon
-                        type='dislike'
+                        type="dislike"
                         theme={action === 'disliked' ? 'filled' : 'outlined'}
                         onClick={this.dislike}
                     />
@@ -55,26 +87,23 @@ export default class Feed extends React.Component {
                 </span>
             </span>,
         ];
-        return(
-            <Comment
-            actions={actions}
-            author={<a>Han Solo</a>}
-            avatar={(
-              <Avatar
-                src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                alt="Han Solo"
-              />
-            )}
-            content={(
-              <p>We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.</p>
-            )}
-            datetime={(
-              <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-                <span>{moment().fromNow()}</span>
-              </Tooltip>
-            )}
-          />
-
+        return (
+            <List
+                itemLayout="vertical"
+                size="large"
+                dataSource={listData}
+                renderItem={item => (
+                    <List.Item actions={actions}>
+                        
+                        <List.Item.Meta
+                            avatar={<Avatar src={item.avatar} />}
+                            title={item.title}
+                            description={item.description}
+                        />
+                        {item.content}
+                    </List.Item>
+                )}
+            />
         );
     }
 }

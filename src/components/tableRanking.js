@@ -1,34 +1,42 @@
 import React from 'react';
-import {Table} from 'antd';
+import { List, Card, Row, Col } from 'antd';
 
-const columns = [{
-    title: 'Troféus',
-    dataIndex: 'trofeus',
-}, {
-    title: 'Medalhas',
-    dataIndex: 'medalhas',
+const data = [
+    {
+        title: 'Nível 1',
+    },
+    {
+        title: 'Nível 2',
+    },
+    {
+        title: 'Nível 3',
+    },
+    {
+        title: 'Nível 4',
+    },
 
-}];
+];
 
-const data = [{
-    key: '1',
-    assuntos: 'Assunto 1',
-    texto: 'Texto 1',
-    video: 'Vídeo 1',
-    praticar: 'Pratica 1',
-},{
-    key: '2',
-    assuntos: 'Assunto 2',
-    texto: 'Texto 2',
-    video: 'Vídeo 2',
-    praticar: 'Praticar 2',
-}];
- export default class Tabela extends React.Component{
-     render(){
-         return(
-             <div>
-                 <Table pagination={false} columns = {columns} dataSource ={data} size = "middle"/>
-             </div>
-         )
-     }
- }
+
+export default class Tabela extends React.Component {
+    render() {
+        return (
+            <List
+                grid={{
+                    gutter: 24, xs: 1, sm: 1, md: 2, lg: 2, xl: 4, xxl: 1,
+                }}
+                dataSource={data}
+                renderItem={item => (
+                    <List.Item>
+                        <Card title={item.title}>
+                            <img src="https://img.icons8.com/dusk/64/000000/trophy.png" />
+                            <img src="https://img.icons8.com/dusk/64/000000/prize.png" />
+                            <img src="https://img.icons8.com/dusk/64/000000/medal2.png" />
+                        </Card>
+                    </List.Item>
+                )}
+            />
+        );
+    }
+}
+

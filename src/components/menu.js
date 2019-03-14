@@ -7,7 +7,7 @@ import Home from "../pages/home";
 import StudyMaterial from "../pages/studyMaterial";
 import Ranking from "../pages/ranking";
 import User from "../components/user";
-import Progresso from "../components/progress";
+import Evolution from "../components/evolution";
 
 
 const { Header, Content, Footer } = Layout;
@@ -21,7 +21,6 @@ export default class Primary extends React.Component {
         return (
             <Layout>
                 <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-                    <div className="logo" />
                     <Menu
                         theme="dark"
                         mode="horizontal"
@@ -29,18 +28,18 @@ export default class Primary extends React.Component {
                         style={{ lineHeight: '64px' }}
                     >
                         <Menu.Item key="2">
-                            <Icon type="home" />
+                            <Icon type="home" style={{ fontSize: '20px' }}/>
                             <span>Início</span>
                             <Link to="./"></Link>
                         </Menu.Item>
                         <Menu.Item key="3">
-                            <Icon type="trophy" />
+                            <Icon type="trophy" style={{ fontSize: '20px' }}/>
                             <span>Ranking</span>
                             <Link to="./Ranking" />
                         </Menu.Item>
                         <SubMenu
                             key="sub1"
-                            title={<span> <Icon type="snippets" />
+                            title={<span> <Icon type="snippets" style={{ fontSize: '20px' }}/>
                                 <span>Material de Estudos</span>
                             </span>}>
                             <Menu.Item key="4"> Nível  1   <Icon type="unlock" /><Link to="./matstudy"></Link></Menu.Item>
@@ -57,9 +56,9 @@ export default class Primary extends React.Component {
                         </SubMenu>
                         <SubMenu
                             key="sub3"
-                            title={<span><Icon type="area-chart" />
+                            title={<span><Icon type="area-chart" style={{ fontSize: '20px' }} />
                                 <span>Relatórios</span>
-                            </span>} >
+                            </span>}>
                             <Menu.Item key="8"> Nível 1   <Icon type="unlock" /> <Link to="./Report"></Link></Menu.Item>
                             <Menu.Item key="9" disabled> Nível 2 <Icon type="lock" /></Menu.Item>
                             <SubMenu
@@ -73,7 +72,7 @@ export default class Primary extends React.Component {
                             <Menu.Item key="12" disabled> Nível 4 <Icon type="lock" /></Menu.Item>
                         </SubMenu>
                         <Menu.Item key="13">
-                            <Icon type="star" />
+                            <Icon type="star" style={{ fontSize: '20px' }}/>
                             <span>Avaliar</span>
                         </Menu.Item>
                         <SubMenu

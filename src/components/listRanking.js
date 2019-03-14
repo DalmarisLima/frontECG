@@ -1,70 +1,68 @@
 import React from 'react';
-import {Statistic, Card, Row, Col, Icon, Avatar, Table } from 'antd';
-import Tabela from './tableRanking';
+import { List, message, Avatar, Spin, Divider, Row, Col } from 'antd';
 
 
 
-export default class ListRanking extends React.Component{
-    render(){
-        return(
-          <div style={{ background: '#ECECEC', padding: '30px' }}>
+
+
+
+export default class ListRanking extends React.Component {
+
+  render() {
+    return (
+      <div className="demo-infinite-container">
+        <List>
+
+          <Divider orientation="left">
+            <img src="https://img.icons8.com/dusk/64/000000/2-circle.png" />
+            <Avatar src="https://img.icons8.com/dusk/64/000000/chevron-down.png" />
+            Dr ª. Larissa
+            </Divider>
           <Row>
-          <Col span={6}>
-              <Card title= 'Rankink'>
-                
-              <Avatar src="https://img.icons8.com/color/96/000000/6-circle-c.png" />
-                <Statistic
-                  value={'Dr. Larissa'}
-                  precision={2}
-                  valueStyle={{ color: '#4682B4' }}
-                  prefix={<Avatar src="https://img.icons8.com/office/40/000000/doctor-female.png" />}
-                />
-                <Avatar src="https://img.icons8.com/color/96/000000/medal2.png" />
-                <Avatar src="https://img.icons8.com/color/48/000000/medal-second-place.png" />
-                <Avatar src="https://img.icons8.com/color/96/000000/medal2-third-place.png" />
-                <Avatar src="https://img.icons8.com/color/96/000000/stethoscope.png" />
-              </Card>
+            <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>Quadro:</Col>
+            <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+              <img src="https://img.icons8.com/dusk/64/000000/trophy.png"></img>
+              <img src="https://img.icons8.com/dusk/64/000000/medal2.png"></img>
+              <img src="https://img.icons8.com/dusk/64/000000/prize.png"></img>
             </Col>
-            
-            <Col span={18}>
-              <Card>
-              <div>
-                 <Tabela/>
-             </div>
-              </Card>
-            </Col>
+            <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}></Col>
           </Row>
-          <Row>
-            <Col span={6}>
-              <Card>
-              <Avatar src="https://img.icons8.com/color/96/000000/7-circle-c.png" />
-                <Statistic
-                 value={'Dr. Pedro'}
-                 precision={2}
-                 valueStyle={{ color: '#4682B4' }}
-                 prefix={<Avatar src="https://img.icons8.com/office/40/000000/doctor-male.png" />}
-                />
-                <Avatar src="https://img.icons8.com/color/96/000000/medal2.png" />
-                <Avatar src="https://img.icons8.com/color/48/000000/medal-second-place.png" />
-              </Card>
-            </Col>
-            </Row>
 
-            <Row>
-            <Col span={6}> 
-              <Card>
-              <Avatar src="https://img.icons8.com/color/96/000000/8-circle-c.png" />
-                <Statistic
-                  value={'Dr. Carlos'}
-                  precision={2}
-                  valueStyle={{ color: '#4682B4' }}
-                  prefix={<Avatar src="https://img.icons8.com/office/40/000000/doctor-male.png" />}
-                />
-                <Avatar src="https://img.icons8.com/color/96/000000/medal2.png" />
-              </Card>
+
+          <Divider orientation="left">
+            <img src="https://img.icons8.com/dusk/64/000000/4-circle.png" />
+            <Avatar src="https://img.icons8.com/dusk/64/000000/chevron-up.png" />
+            Dr. Eu
+            </Divider>
+          <Row>
+            <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>Quadro:</Col>
+            <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+              <img src="https://img.icons8.com/dusk/64/000000/trophy.png"></img>
+              <img src="https://img.icons8.com/dusk/64/000000/medal2.png"></img>
+              <img src="https://img.icons8.com/dusk/64/000000/prize.png"></img>
             </Col>
+            <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}></Col>
           </Row>
-        </div>
-        );
-    }
+
+
+          <Divider orientation="left">
+            <img src="https://img.icons8.com/dusk/64/000000/5-circle.png" />
+            <Avatar src="https://img.icons8.com/dusk/64/000000/chevron-up.png" />
+            Dr. Pedro
+            </Divider>
+          <Row>
+            <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>Quadro:</Col>
+            <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+              <img src="https://img.icons8.com/dusk/64/000000/trophy.png"></img>
+              <img src="https://img.icons8.com/dusk/64/000000/medal2.png"></img>
+              <img src="https://img.icons8.com/dusk/64/000000/prize.png"></img>
+            </Col>
+            <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}></Col>
+          </Row>
+
+
+        </List>
+      </div>
+    );
+  }
 }
