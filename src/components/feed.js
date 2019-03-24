@@ -1,41 +1,12 @@
 import React from 'react';
-import { List, Avatar, Icon, Comment, Tooltip } from 'antd';
+import { Avatar, Icon, Comment, Timeline, Tooltip, Divider } from 'antd';
 import moment from 'moment';
 
-const listData = []; {
-    listData.push({
 
-        title: 'Dr. Pedro',
-        avatar: 'https://img.icons8.com/office/40/000000/doctor-male.png',
-        content: 'Resolveu um caso clínico!',
- }, {
-
-            title: 'Dr. Larissa',
-            avatar: "https://img.icons8.com/office/40/000000/doctor-female.png",
-            
-            content: 'Conquistou uma medalha de ouro!',
-        }, {
-            title: 'Dr. Carlos',
-            avatar: "https://img.icons8.com/office/40/000000/babys-room.png", 
-            content: 'Completou mais um nível',
-        }, {
-            title: 'Dr. João',
-            avatar: "https://img.icons8.com/office/40/000000/babys-room.png", 
-            content: 'Completou mais um nível',
-            
-        }, {
-            title: 'Dr. Maria',
-            avatar: "https://img.icons8.com/office/40/000000/doctor-female.png", 
-            content: 'Completou mais um nível',
-        
-    }, {
-        title: 'Dr. Fernanda',
-        avatar: "https://img.icons8.com/office/40/000000/doctor-female.png", 
-        content: 'Completou mais um nível',
-});
-}
-
-export default class InfiniteListExample extends React.Component {
+export default class Feed extends React.Component {
+    state = {
+        reverse: false,
+    }
     state = {
         likes: 0,
         dislikes: 0,
@@ -57,13 +28,12 @@ export default class InfiniteListExample extends React.Component {
             action: 'disliked',
         });
     }
-
     render() {
         const { likes, dislikes, action } = this.state;
 
         const actions = [
             <span>
-                <Tooltip title="Gostei">
+                <Tooltip title="Like">
                     <Icon
                         type="like"
                         theme={action === 'liked' ? 'filled' : 'outlined'}
@@ -75,7 +45,7 @@ export default class InfiniteListExample extends React.Component {
                 </span>
             </span>,
             <span>
-                <Tooltip title="Não Gostei">
+                <Tooltip title="Dislike">
                     <Icon
                         type="dislike"
                         theme={action === 'disliked' ? 'filled' : 'outlined'}
@@ -88,22 +58,74 @@ export default class InfiniteListExample extends React.Component {
             </span>,
         ];
         return (
-            <List
-                itemLayout="vertical"
-                size="large"
-                dataSource={listData}
-                renderItem={item => (
-                    <List.Item actions={actions}>
-                        
-                        <List.Item.Meta
-                            avatar={<Avatar src={item.avatar} />}
-                            title={item.title}
-                            description={item.description}
+            <div>
+                <Timeline pending="Carregando..." reverse={this.state.reverse}>
+                    <Timeline.Item>
+                        <Comment
+                            actions={actions}
+                            author={<a>Dr. Pedro</a>}
+                            avatar={(
+                                <Avatar
+                                    src="https://img.icons8.com/dusk/64/000000/babys-room.png"
+                                    alt="Dr. Pedro"
+                                />
+                            )}
+                            content={(
+                                <p> Assitiu o vídeo sobre ...</p>
+                            )}
+                            datetime={(
+                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                                    <span>{moment().fromNow()}</span>
+                                </Tooltip>
+                            )}
                         />
-                        {item.content}
-                    </List.Item>
-                )}
-            />
+                         <Divider type="horizontal" ></Divider>
+                    </Timeline.Item>
+                    <Timeline.Item>
+                        <Comment
+                            actions={actions}
+                            author={<a>Drª Maria</a>}
+                            avatar={(
+                                <Avatar
+                                    src="https://img.icons8.com/dusk/64/000000/doctor-female.png"
+                                    alt="Drª Maria"
+                                />
+                            )}
+                            content={(
+                                <p>Consquistou seu primeiro troféu...</p>
+                            )}
+                            datetime={(
+                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                                    <span>{moment().fromNow()}</span>
+                                </Tooltip>
+                            )}
+                        />
+                        <Divider type="horizontal" ></Divider>
+                        </Timeline.Item>
+                    <Timeline.Item>
+                        <Comment
+                            actions={actions}
+                            author={<a>Dr. João</a>}
+                            avatar={(
+                                <Avatar
+                                    src="https://img.icons8.com/dusk/64/000000/medical-doctor.png"
+                                    alt="Dr Joao"
+                                />
+                            )}
+                            content={(
+                                <p>Repondeu o execício do assunto...</p>
+                            )}
+                            datetime={(
+                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                                    <span>{moment().fromNow()}</span>
+                                </Tooltip>
+                            )}
+                        />
+                        <Divider type="horizontal" ></Divider>
+                    </Timeline.Item>
+                </Timeline>
+
+            </div>
         );
     }
 }

@@ -1,22 +1,18 @@
 import React from 'react';
 import { Card, Col, Row } from 'antd';
-import Calendar from '../components/calendar';
-import Feed from '../components/feed';
-import Evolution from '../components/evolution';
+import Avaliation from '../components/aval';
 
 const tablis = [{
     key: 'tab1',
-    tab: 'Cora'
-},{
-    key: 'tab2',
-    tab: 'Feed Notícias',
-
-}];
+    tab: 'Avaliação'
+},];
 
 const contentList = {
-    tab1: <Evolution/>,
-    tab2: <div><Feed/>
-    </div>,
+    tab1: <Row>
+        <Col span={12} offset={4}>
+            <Avaliation />
+        </Col>
+    </Row>,
 };
 
 export default class Home extends React.Component {
@@ -34,7 +30,6 @@ export default class Home extends React.Component {
             <div>
                 <Card
                     style={{ width: '100%', marginTop: "70px" }}
-                    title='Início'
                     tabList={tablis}
                     activeTabKey={this.state.key}
                     onTabChange={(key) => { this.onTabChange(key, 'key'); }}>

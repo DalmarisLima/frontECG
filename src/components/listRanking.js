@@ -1,10 +1,5 @@
 import React from 'react';
-import { List, message, Avatar, Spin, Divider, Row, Col } from 'antd';
-
-
-
-
-
+import { List, Avatar, Spin, Divider, Row, Col } from 'antd';
 
 export default class ListRanking extends React.Component {
 

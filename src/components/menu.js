@@ -7,7 +7,7 @@ import Home from "../pages/home";
 import StudyMaterial from "../pages/studyMaterial";
 import Ranking from "../pages/ranking";
 import User from "../components/user";
-import Evolution from "../components/evolution";
+import Avaliation from "../pages/avaliation"
 
 
 const { Header, Content, Footer } = Layout;
@@ -74,6 +74,7 @@ export default class Primary extends React.Component {
                         <Menu.Item key="13">
                             <Icon type="star" style={{ fontSize: '20px' }}/>
                             <span>Avaliar</span>
+                            <Link to="./Avaliation"></Link>
                         </Menu.Item>
                         <SubMenu
                             key="sub4"
@@ -92,6 +93,7 @@ export default class Primary extends React.Component {
                         <Route path="/ranking" exact component={Ranking} />
                         <Route path="/report" exact component={Report} />
                         <Route path="/matstudy" exact component={StudyMaterial} />
+                        <Route path="/avaliation" exact component={Avaliation} />
                     </div>
                 </Content>
 
