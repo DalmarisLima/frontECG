@@ -3,22 +3,27 @@ import { Card, Skeleton} from 'antd';
 import Ques from '../components/quetions';
 import Video from '../components/video';
 import Text from '../components/text';
+import Tree from "../components/treeN1";
 
 const tabList = [{
     key: 'tab1',
-    tab: 'Material de Texto',
+    tab: 'Arvore',
 }, {
     key: 'tab2',
-    tab: 'Material de Vídeo',
+    tab: 'Material de Texto',
 }, {
     key: 'tab3',
+    tab: 'Material de Vídeo',
+}, {
+    key: 'tab4',
     tab: 'Praticar',
 
 }];
 const contentList = {
-    tab1: <Text/>,
-    tab2:<Video/>,
-    tab3: <Ques/>,
+    tab1: <Tree/>,
+    tab2: <Text/>,
+    tab3:<Video/>,
+    tab4: <Ques/>,
 };
 
 export default class StudyMaterial extends React.Component {
