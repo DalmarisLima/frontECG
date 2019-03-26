@@ -8,10 +8,11 @@ export default class Tabela extends React.Component {
             <div>
 
                 <Row>
-                    <Col span={12} offset={4}>
+                    <Col span={24} >
                         <embed
                             src="Eletrofisiologia do Coração (PRONTO).pdf "
-                            width="760" height="500"
+                            width="100%" 
+                            height="800"
                             type='application/pdf'>
                         </embed>
                     </Col>

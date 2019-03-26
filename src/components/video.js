@@ -8,10 +8,10 @@ export default class Tabela extends React.Component {
             <div>
 
                 <Row>
-                    <Col span={12} offset={6}>
+                    <Col span={24}>
                         <iframe
-                            width="500"
-                            height="300"
+                            width="100%"
+                            height="600"
                             src="https://www.youtube.com/embed/vLdPL3xvq3M">
                         </iframe>
                     </Col>

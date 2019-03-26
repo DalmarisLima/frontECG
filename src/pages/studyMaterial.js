@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Skeleton} from 'antd';
+import { Card, Row, Col } from 'antd';
 import Ques from '../components/quetions';
 import Video from '../components/video';
 import Text from '../components/text';
@@ -20,10 +20,18 @@ const tabList = [{
 
 }];
 const contentList = {
-    tab1: <Tree/>,
-    tab2: <Text/>,
-    tab3:<Video/>,
-    tab4: <Ques/>,
+    tab1: <Tree />,
+    tab2: <Row>
+        <Col span={24}>
+            <Text />
+        </Col>
+    </Row>,
+    tab3: <Row>
+        <Col span={24}>
+            <Video />
+        </Col>
+    </Row>,
+    tab4: <Ques />,
 };
 
 export default class StudyMaterial extends React.Component {
@@ -38,7 +46,7 @@ export default class StudyMaterial extends React.Component {
         return (
             <div>
                 <Card
-                    style={{ width: '100%', marginTop: "70px"}}
+                    style={{ width: '100%', marginTop: "70px" }}
                     title="Material de Estudos"
                     tabList={tabList}
                     activeTabKey={this.state.key}
