@@ -6,10 +6,10 @@ export default class Tabela extends React.Component {
     render() {
         return (
             <div>
-
                 <Row>
                     <Col span={24}>
                         <iframe
+                            frameborder="0"
                             width="100%"
                             height="600"
                             src="https://www.youtube.com/embed/vLdPL3xvq3M">

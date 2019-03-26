@@ -20,7 +20,11 @@ const tabList = [{
 
 }];
 const contentList = {
-    tab1: <Tree />,
+    tab1: <Row>
+        <Col span={24}>
+        <Tree />
+        </Col>
+    </Row>,
     tab2: <Row>
         <Col span={24}>
             <Text />

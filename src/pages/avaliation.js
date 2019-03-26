@@ -9,7 +9,7 @@ const tablis = [{
 
 const contentList = {
     tab1: <Row>
-        <Col span={12} offset={4}>
+        <Col span={24}>
             <Avaliation />
         </Col>
     </Row>,

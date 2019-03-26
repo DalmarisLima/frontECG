@@ -8,6 +8,7 @@ import StudyMaterial from "../pages/studyMaterial";
 import Ranking from "../pages/ranking";
 import User from "../components/user";
 import Avaliation from "../pages/avaliation"
+import { Avatar } from '@material-ui/core';
 
 
 const { Header, Content, Footer } = Layout;

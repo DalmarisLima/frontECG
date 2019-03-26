@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Icon, Comment, Timeline, Tooltip, Divider } from 'antd';
+import { Avatar, Icon, Comment, Timeline, Tooltip, Divider, Col, Row } from 'antd';
 import moment from 'moment';
 
 
@@ -33,7 +33,7 @@ export default class Feed extends React.Component {
 
         const actions = [
             <span>
-                <Tooltip title="Like">
+                <Tooltip title="Gostei">
                     <Icon
                         type="like"
                         theme={action === 'liked' ? 'filled' : 'outlined'}
@@ -45,7 +45,7 @@ export default class Feed extends React.Component {
                 </span>
             </span>,
             <span>
-                <Tooltip title="Dislike">
+                <Tooltip title="Não Gostei">
                     <Icon
                         type="dislike"
                         theme={action === 'disliked' ? 'filled' : 'outlined'}
@@ -59,72 +59,90 @@ export default class Feed extends React.Component {
         ];
         return (
             <div>
-                <Timeline pending="Carregando..." reverse={this.state.reverse}>
-                    <Timeline.Item>
-                        <Comment
-                            actions={actions}
-                            author={<a>Dr. Pedro</a>}
-                            avatar={(
-                                <Avatar
-                                    src="https://img.icons8.com/dusk/64/000000/babys-room.png"
-                                    alt="Dr. Pedro"
-                                />
-                            )}
-                            content={(
-                                <p> Assitiu o vídeo sobre ...</p>
-                            )}
-                            datetime={(
-                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-                                    <span>{moment().fromNow()}</span>
-                                </Tooltip>
-                            )}
-                        />
-                         <Divider type="horizontal" ></Divider>
-                    </Timeline.Item>
-                    <Timeline.Item>
-                        <Comment
-                            actions={actions}
-                            author={<a>Drª Maria</a>}
-                            avatar={(
-                                <Avatar
-                                    src="https://img.icons8.com/dusk/64/000000/doctor-female.png"
-                                    alt="Drª Maria"
-                                />
-                            )}
-                            content={(
-                                <p>Consquistou seu primeiro troféu...</p>
-                            )}
-                            datetime={(
-                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-                                    <span>{moment().fromNow()}</span>
-                                </Tooltip>
-                            )}
-                        />
-                        <Divider type="horizontal" ></Divider>
-                        </Timeline.Item>
-                    <Timeline.Item>
-                        <Comment
-                            actions={actions}
-                            author={<a>Dr. João</a>}
-                            avatar={(
-                                <Avatar
-                                    src="https://img.icons8.com/dusk/64/000000/medical-doctor.png"
-                                    alt="Dr Joao"
-                                />
-                            )}
-                            content={(
-                                <p>Repondeu o execício do assunto...</p>
-                            )}
-                            datetime={(
-                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-                                    <span>{moment().fromNow()}</span>
-                                </Tooltip>
-                            )}
-                        />
-                        <Divider type="horizontal" ></Divider>
-                    </Timeline.Item>
-                </Timeline>
 
+                <Row>
+                    <Col span={24}>
+
+                        <Timeline pending="Carregando..." reverse={this.state.reverse}>
+
+                            <Row>
+                                <Col span={24}>
+                                    <Timeline.Item>
+                                        <Comment
+                                            actions={actions}
+                                            author={<a>Dr. Pedro</a>}
+                                            avatar={(
+                                                <Avatar
+                                                    src="https://img.icons8.com/dusk/64/000000/babys-room.png"
+                                                    alt="Dr. Pedro"
+                                                />
+                                            )}
+                                            content={(
+                                                <p> Assitiu o vídeo sobre ...</p>
+                                            )}
+                                            datetime={(
+                                                <Tooltip title={moment().format('DD-MM-YYYY HH:mm')}>
+                                                    <span>{moment().fromNow()}</span>
+                                                </Tooltip>
+                                            )}
+                                        />
+                                        <Divider type="horizontal" ></Divider>
+                                    </Timeline.Item>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col span={24}>
+                                    <Timeline.Item>
+                                        <Comment
+                                            actions={actions}
+                                            author={<a>Drª Maria</a>}
+                                            avatar={(
+                                                <Avatar
+                                                    src="https://img.icons8.com/dusk/64/000000/doctor-female.png"
+                                                    alt="Drª Maria"
+                                                />
+                                            )}
+                                            content={(
+                                                <p>Consquistou seu primeiro troféu...</p>
+                                            )}
+                                            datetime={(
+                                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                                                    <span>{moment().fromNow()}</span>
+                                                </Tooltip>
+                                            )}
+                                        />
+                                        <Divider type="horizontal" ></Divider>
+                                    </Timeline.Item>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col span={24}>
+                                    <Timeline.Item>
+                                        <Comment
+                                            actions={actions}
+                                            author={<a>Dr. João</a>}
+                                            avatar={(
+                                                <Avatar
+                                                    src="https://img.icons8.com/dusk/64/000000/medical-doctor.png"
+                                                    alt="Dr Joao"
+                                                />
+                                            )}
+                                            content={(
+                                                <p>Repondeu o execício do assunto...</p>
+                                            )}
+                                            datetime={(
+                                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                                                    <span>{moment().fromNow()}</span>
+                                                </Tooltip>
+                                            )}
+                                        />
+                                        <Divider type="horizontal" ></Divider>
+                                    </Timeline.Item>
+                                </Col>
+                            </Row>
+                        </Timeline>
+                    </Col>
+                </Row>
             </div>
         );
     }
