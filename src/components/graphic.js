@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Bar} from 'recharts';
+  import {Card, Typography} from 'antd';
+  const { Title } = Typography;
 
 
 const data = [
@@ -17,6 +19,10 @@ export default class Graphic extends PureComponent {
 
   render() {
     return (
+
+      <Card
+              type="inner"
+              title={<Title level={4}>Evolução</Title>}>
       <div style={{ width: '100%', height: 300 }}>
         <ResponsiveContainer>
           <AreaChart
@@ -33,6 +39,7 @@ export default class Graphic extends PureComponent {
           </AreaChart>
         </ResponsiveContainer>
       </div>
+      </Card>
     );
   }
 }

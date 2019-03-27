@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Progress, Row, Col, Divider, Typography } from 'antd';
+import { Progress, Row, Col, Divider, Typography, Card } from 'antd';
 import { withStyles } from '@material-ui/core/styles';
 import Paragraph from 'antd/lib/typography/Paragraph';
 import { AST_Label } from 'terser';
@@ -17,6 +17,11 @@ function PositionedTooltips(props) {
     return (
 
         <div>
+
+<Card
+       type="inner"
+       title= {<Title level={4}>Não sei a Nomeclatura Aprpriada</Title>}
+    >
             <Row>
                 <Col span={24}>
                     <Divider orientation="left"> <Title level={3}>Nível 1: Eletrofisiologia cardíaca</Title></Divider>
@@ -292,6 +297,7 @@ function PositionedTooltips(props) {
                     </Row>
                 </Col>
             </Row>
+            </Card>
         </div>
 
     );

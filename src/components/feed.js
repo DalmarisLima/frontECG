@@ -1,7 +1,8 @@
 import React from 'react';
-import { Avatar, Icon, Comment, Timeline, Tooltip, Divider, Col, Row } from 'antd';
+import { Avatar, Icon, Comment, Timeline, Tooltip, Divider, Col, Row, Card,  Typography } from 'antd';
 import moment from 'moment';
 
+const { Title } = Typography;
 
 export default class Feed extends React.Component {
     state = {
@@ -60,7 +61,11 @@ export default class Feed extends React.Component {
         return (
             <div>
 
-                <Row>
+                <Card
+                    type="inner"
+                    title= {<Title level={4}>Feed</Title>}
+                >
+                    <Row>
                     <Col span={24}>
 
                         <Timeline pending="Carregando..." reverse={this.state.reverse}>
@@ -143,6 +148,7 @@ export default class Feed extends React.Component {
                         </Timeline>
                     </Col>
                 </Row>
+                </Card>
             </div>
         );
     }

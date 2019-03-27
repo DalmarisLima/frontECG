@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Col, Row } from 'antd';
-import Avaliation from '../components/aval';
+import Avaliation from '../components/form';
 
 const tablis = [{
     key: 'tab1',

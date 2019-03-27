@@ -1,8 +1,9 @@
 import React from 'react';
-import { Radio, Alert, Row, Col, Button, notification, Icon, Avatar } from 'antd';
+import { Radio, Alert, Row, Col, Button, notification, Card, Avatar,Typography  } from 'antd';
 
 const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
+const { Title } = Typography;
 
 const close = () => {
     console.log('Notification was closed. Either the close button was clicked or duration time elapsed.');
@@ -60,6 +61,10 @@ export default class Pratice extends React.Component {
             lineHeight: '30px',
         };
         return (
+            <Card
+            type="inner"
+            title= {<Title level={4}>1. Pergunta</Title>}
+        >
             <Row>
                 <Col span={24}> 
                     <RadioGroup onChange={this.onChange} value={this.state.value} buttonStyle="solid">
@@ -95,6 +100,7 @@ export default class Pratice extends React.Component {
                     </RadioGroup>
                 </Col>
             </Row>
+            </Card>
         );
 
     }

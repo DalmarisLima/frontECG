@@ -1,6 +1,7 @@
 import React from 'react';
-import {Table} from 'antd';
+import {Table, Card, Typography} from 'antd';
 
+const { Title } = Typography;
 const columns = [{
     title: 'Assuntos',
     dataIndex: 'assuntos',
@@ -33,7 +34,15 @@ const data = [{
      render(){
          return(
              <div>
-                 <Table columns = {columns} dataSource ={data} size = "middle"/>
+
+<Card
+              type="inner"
+              title={<Title level={4}>Ver titulo apropriado</Title>}>
+
+
+
+                 <Table columns = {columns} dataSource ={data} size = "middle" pagination={false}/>
+                 </Card>
              </div>
          )
      }

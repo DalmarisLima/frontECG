@@ -1,5 +1,6 @@
 import React from 'react';
-import { List, Card, Row, Col } from 'antd';
+import { List, Card, Row, Col, Typography } from 'antd';
+
 
 const data = [
     {
@@ -28,7 +29,7 @@ export default class Tabela extends React.Component {
                 dataSource={data}
                 renderItem={item => (
                     <List.Item>
-                        <Card title={item.title}>
+                        <Card title={item.title} type="inner">
                             <img src="https://img.icons8.com/dusk/64/000000/trophy.png" />
                             <img src="https://img.icons8.com/dusk/64/000000/prize.png" />
                             <img src="https://img.icons8.com/dusk/64/000000/medal2.png" />
