@@ -20,7 +20,7 @@ function PositionedTooltips(props) {
 
 <Card
        type="inner"
-       title= {<Title level={4}>Não sei a Nomeclatura Aprpriada</Title>}
+       title= {<Title level={4}>Árvore do Conhecimento</Title>}
     >
             <Row>
                 <Col span={24}>
@@ -47,7 +47,9 @@ function PositionedTooltips(props) {
                                 width='100px'
                                 strokeColor='#6CB6C9'
                                 strokeWidth='10' />
-                            <Paragraph strong={true} >Geração /Formação e Condução / Propagação do estímulo</Paragraph>
+                            <Paragraph strong={true}>Geração/ <br/>
+                            Formação e Condução/<br/>
+                            Propagação do estímulo</Paragraph>
                         </Col>
                         <Col span={8}></Col>
                         <Col span={8}><Progress
@@ -55,7 +57,10 @@ function PositionedTooltips(props) {
                             percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                             width='100px'
                             strokeWidth='10' />
-                            <Paragraph strong={true} >Células cardíacas: elétricas (rápidas e lentas) e miocárdicas</Paragraph>
+                            <Paragraph strong={true} >Células cardíacas: <br/>
+                            elétricas <br/>
+                            (rápidas e lentas)<br/>
+                             e miocárdicas</Paragraph>
                         </Col>
                     </Row>
 
@@ -68,7 +73,9 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true} style={{ textAlign: "center" }}>Bases da eletrocardiografian(teoria do dipolo, vetores e ondas)</Paragraph>
+                            <Paragraph strong={true}>Bases da <br/>
+                            eletrocardiografian<br/>
+                            (teoria do dipolo, vetores e ondas)</Paragraph>
                         </Col>
                         <Col span={8}></Col>
                     </Row>
@@ -85,7 +92,8 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true} style={{ textAlign: "center" }}>Derivações do ECG e Triângulo de Einthoven</Paragraph>
+                            <Paragraph strong={true}>Derivações do ECG e <br/>
+                             Triângulo de Einthoven</Paragraph>
                         </Col>
                         <Col span={8}></Col>
                     </Row>
@@ -98,7 +106,8 @@ function PositionedTooltips(props) {
                                 width='100px'
                                 strokeColor='#6CB6C9'
                                 strokeWidth='10' />
-                            <Paragraph strong={true} style={{ textAlign: "center" }}>Colocação dos eletrodos no paciente</Paragraph>
+                            <Paragraph strong={true} >Colocação dos eletrodos<br/>
+                             no paciente</Paragraph>
                         </Col>
                         <Col span={8}></Col>
                         <Col span={8}>
@@ -107,7 +116,8 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true} style={{ textAlign: "center" }}>Papel do ECG - tempo e voltagem</Paragraph>
+                            <Paragraph strong={true} >Papel do ECG - <br/>
+                            tempo e voltagem</Paragraph>
                         </Col>
                     </Row>
 
@@ -118,7 +128,8 @@ function PositionedTooltips(props) {
                             percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                             width='100px'
                             strokeWidth='10' />
-                            <Paragraph strong={true} style={{ textAlign: "center" }}>Segmentos, intervalos e ondas</Paragraph>
+                            <Paragraph strong={true} >Segmentos, <br/>
+                            intervalos e ondas</Paragraph>
                         </Col>
                         <Col span={6}>
                             <Progress
@@ -126,7 +137,8 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true} style={{ textAlign: "center" }}>Como determinar o ritmo, o eixo e a frequência</Paragraph>
+                            <Paragraph strong={true} >Como determinar o ritmo,<br/>
+                             o eixo e a frequência</Paragraph>
                         </Col>
                         <Col span={6}></Col>
                     </Row>
@@ -146,7 +158,7 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true} style={{ textAlign: "center" }}>Alterações do eixo</Paragraph>
+                            <Paragraph strong={true}>Alterações do eixo</Paragraph>
                         </Col>
                         <Col span={8}></Col>
                     </Row>
@@ -197,7 +209,9 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true}>Introdução às arritmias – mecanismos, causas e manifestações clínicas</Paragraph>
+                            <Paragraph strong={true}>Introdução às arritmias –<br/>
+                             mecanismos, causas e<br/>
+                              manifestações clínicas</Paragraph>
                         </Col>
                         <Col span={8}></Col>
                     </Row>
@@ -232,7 +246,9 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true}>Extrassístoles supraventriculares e ventriculares</Paragraph>
+                            <Paragraph strong={true}>Extrassístoles <br/>
+                            supraventriculares e <br/>
+                            ventriculares</Paragraph>
                         </Col>
                         <Col span={6}>
                             <Progress
@@ -240,7 +256,8 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true}>Taquiarritmias supraventriculares</Paragraph>
+                            <Paragraph strong={true}>Taquiarritmias<br/>
+                             supraventriculares</Paragraph>
                         </Col>
                         <Col span={6}></Col>
                     </Row>
@@ -256,7 +273,8 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true}>O infarto do miocárido e seus estágios</Paragraph>
+                            <Paragraph strong={true}>O infarto do miocárido<br/>
+                             e seus estágios</Paragraph>
                         </Col>
                         <Col span={8}></Col>
                     </Row>
@@ -270,7 +288,9 @@ function PositionedTooltips(props) {
                                 width='100px'
                                 strokeColor='#6CB6C9'
                                 strokeWidth='10' />
-                            <Paragraph strong={true}>Manifestações eletrocardiográficas do infarto</Paragraph>
+                            <Paragraph strong={true}>Manifestações <br/>
+                            eletrocardiográficas<br/>
+                             do infarto</Paragraph>
                         </Col>
                         <Col span={8}></Col>
                         <Col span={8}>
@@ -279,7 +299,8 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true}>Anatomia coronariana e diagnóstico topográfico</Paragraph>
+                            <Paragraph strong={true}>Anatomia coronariana<br/>
+                             e diagnóstico topográfico</Paragraph>
                         </Col>
                     </Row>
 
@@ -291,7 +312,9 @@ function PositionedTooltips(props) {
                                 percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
                                 width='100px'
                                 strokeWidth='10' />
-                            <Paragraph strong={true}>Síndromes coronarianas agudas e angina de Prinzmetal </Paragraph>
+                            <Paragraph strong={true}>Síndromes<br/>
+                             coronarianas agudas e<br/>
+                              angina de Prinzmetal </Paragraph>
                         </Col>
                         <Col span={8}></Col>
                     </Row>

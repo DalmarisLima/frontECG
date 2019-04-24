@@ -14,7 +14,7 @@ const tablis = [{
 }];
 
 const contentList = {
-    tab1: <Evolution/>,
+    tab1: <div>Local da Cora</div>,
     tab2: <div><Feed/>
     </div>,
 };

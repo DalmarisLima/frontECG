@@ -8,7 +8,7 @@ import StudyMaterial from "../pages/studyMaterial";
 import Ranking from "../pages/ranking";
 import User from "../components/user";
 import Avaliation from "../pages/avaliation"
-import { Avatar } from '@material-ui/core';
+import Evolution  from "../components/evolution";
 
 
 const { Header, Content, Footer } = Layout;
@@ -43,34 +43,34 @@ export default class Primary extends React.Component {
                             title={<span> <Icon type="snippets" style={{ fontSize: '20px' }}/>
                                 <span>Material de Estudos</span>
                             </span>}>
-                            <Menu.Item key="4"> Nível  1   <Icon type="unlock" /><Link to="./matstudy"></Link></Menu.Item>
-                            <Menu.Item key="5" disabled> Nível 2 <Icon type="lock" /></Menu.Item>
+                            <Menu.Item key="4"><Icon type="unlock" /> Nível  1 <Link to="./matstudy"></Link></Menu.Item>
+                            <Menu.Item key="5" disabled> <Icon type="lock"/>Nível 2</Menu.Item>
                             <SubMenu
                                 key="sub2"
                                 title={<span disabled><Icon type="lock" />
                                     <span >Nível 3</span>
                                 </span>} >
-                                <Menu.Item key="6" disabled>Modulo 1   <Icon type="lock" /></Menu.Item>
-                                <Menu.Item key="7" disabled>Modulo 2 <Icon type="lock" /></Menu.Item>
+                                <Menu.Item key="6" disabled> <Icon type="lock" />Modulo 1 </Menu.Item>
+                                <Menu.Item key="7" disabled> <Icon type="lock" /> Modulo 2</Menu.Item>
                             </SubMenu>
-                            <Menu.Item key="8" disabled> Nível 4 <Icon type="lock" /></Menu.Item>
+                            <Menu.Item key="8" disabled><Icon type="lock" /> Nível 4 </Menu.Item>
                         </SubMenu>
                         <SubMenu
                             key="sub3"
                             title={<span><Icon type="area-chart" style={{ fontSize: '20px' }} />
                                 <span>Relatórios</span>
                             </span>}>
-                            <Menu.Item key="8"> Nível 1   <Icon type="unlock" /> <Link to="./Report"></Link></Menu.Item>
-                            <Menu.Item key="9" disabled> Nível 2 <Icon type="lock" /></Menu.Item>
+                            <Menu.Item key="8"><Icon type="unlock" /> Nível 1 <Link to="./Report"></Link></Menu.Item>
+                            <Menu.Item key="9" disabled> <Icon type="lock" /> Nível 2</Menu.Item>
                             <SubMenu
                                 key="sub2"
                                 title={<span disabled><Icon type="lock" />
                                     <span >Nível 3</span>
                                 </span>} >
-                                <Menu.Item key="10" disabled>Modulo 1   <Icon type="lock" /></Menu.Item>
-                                <Menu.Item key="11" disabled>Modulo 2 <Icon type="lock" /></Menu.Item>
+                                <Menu.Item key="10" disabled><Icon type="lock" />Modulo 1 </Menu.Item>
+                                <Menu.Item key="11" disabled><Icon type="lock" /> Modulo 2 </Menu.Item>
                             </SubMenu>
-                            <Menu.Item key="12" disabled> Nível 4 <Icon type="lock" /></Menu.Item>
+                            <Menu.Item key="12" disabled><Icon type="lock" /> Nível 4 </Menu.Item>
                         </SubMenu>
                         <Menu.Item key="13">
                             <Icon type="star" style={{ fontSize: '20px' }}/>
@@ -78,7 +78,7 @@ export default class Primary extends React.Component {
                             <Link to="./Avaliation"></Link>
                         </Menu.Item>
                         <SubMenu
-                            key="sub4"
+                            key="sub14"
                             title={<span> <User /></span>} >
                             <Menu.Item key="14"><Icon type="user" /> Pefil</Menu.Item>
                             <Menu.Item key="15"><Badge dot><Icon type="notification" />
