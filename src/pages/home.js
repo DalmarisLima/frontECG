@@ -1,21 +1,22 @@
 import React from 'react';
 import { Card, Col, Row } from 'antd';
-import Calendar from '../components/calendar';
+import cora from './cora.svg';
 import Feed from '../components/feed';
-import Evolution from '../components/evolution';
 
 const tablis = [{
     key: 'tab1',
     tab: 'Cora'
-},{
+}, {
     key: 'tab2',
     tab: 'Feed Notícias',
 
 }];
 
 const contentList = {
-    tab1: <div>Local da Cora</div>,
-    tab2: <div><Feed/>
+    tab1: <div>
+        <img src={cora} className="Cora" alt="cora" />
+    </div>,
+    tab2: <div><Feed />
     </div>,
 };
 
