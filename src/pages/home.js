@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Col, Row } from 'antd';
-import cora from './cora.svg';
+import Coresl from '../components/carosel';
 import Feed from '../components/feed';
 
 const tablis = [{
@@ -14,7 +14,7 @@ const tablis = [{
 
 const contentList = {
     tab1: <div>
-        <img src={cora} className="Cora" alt="cora" />
+<Coresl/>
     </div>,
     tab2: <div><Feed />
     </div>,
