@@ -7,11 +7,15 @@ import cora from './cora1.svg';
 
 const text = <span>Ranking</span>;
 const content = (
-    <Paragraph strong={true}> 
-    <p> Seus acertos serão convertidos em pontos e acumulados progressivamente. Se for de sua vontade participar,</p>
-        <p>você poderá visualizar sua posição no ranking com todos os alunos participantes do ECG tutor.</p>
+    <Paragraph strong={true}>
+         <img src={cora} className="Cora" alt="cora" />
+        <p> Seus acertos serão convertidos em pontos e</p>
+        <p> acumulados progressivamente.</p> 
+        <p>Se for de sua vontade participar,</p>
+        <p>você poderá visualizar sua posição no ranking</p> 
+        <p>com todos os alunos participantes do ECG tutor.</p>
         <p>Vamos acessar o material de estudos agora?</p>
-</Paragraph>
+    </Paragraph>
 
 );
 
@@ -41,6 +45,7 @@ export default class StudyMaterial extends React.Component {
 
                 <Row>
                     <Col span={24}>
+                    <Popover placement="top" content={content} title="Ranking">
                         <Card
                             style={{ width: '100%', marginTop: "70px" }}
                             title="Ranking"
@@ -48,13 +53,10 @@ export default class StudyMaterial extends React.Component {
                             activeTabKey={this.state.key}
                             onTabChange={(key) => { this.onTabChange(key, 'key'); }}>
                             {contentList[this.state.key]}
-                            <Col span={12}>
-                        <Popover placement="top" content={content} title="Ranking">
-                            <img src={cora} className="Cora" alt="cora" />
-                            </Popover>
-                        </Col>
-                        </Card>
                         
+                        </Card>
+                        </Popover>
+
                     </Col>
                 </Row>
             </div>
