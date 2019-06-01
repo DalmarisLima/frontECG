@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Icon, Typography, Badge } from 'antd';
+import { Layout, Menu, Icon, Popover, Badge } from 'antd';
 import { Link } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Report from "../pages/report";
@@ -8,11 +8,13 @@ import StudyMaterial from "../pages/studyMaterial";
 import Ranking from "../pages/ranking";
 import User from "../components/user";
 import Avaliation from "../pages/avaliation"
-import Evolution  from "../components/evolution";
+import cora from './cora.svg';
 
 
 const { Header, Content, Footer } = Layout;
 const SubMenu = Menu.SubMenu;
+
+const buttonWidth = 70;
 
 
 export default class Primary extends React.Component {
@@ -29,22 +31,23 @@ export default class Primary extends React.Component {
                         style={{ lineHeight: '64px' }}
                     >
                         <Menu.Item key="2">
-                            <Icon type="home" style={{ fontSize: '20px' }}/>
+                            <Icon type="home" style={{ fontSize: '20px' }} />
                             <span>Início</span>
                             <Link to="./"></Link>
                         </Menu.Item>
                         <Menu.Item key="3">
-                            <Icon type="trophy" style={{ fontSize: '20px' }}/>
+                            <Icon type="trophy" style={{ fontSize: '20px' }} />
                             <span>Ranking</span>
                             <Link to="./Ranking" />
+
                         </Menu.Item>
                         <SubMenu
                             key="sub1"
-                            title={<span> <Icon type="snippets" style={{ fontSize: '20px' }}/>
+                            title={<span> <Icon type="snippets" style={{ fontSize: '20px' }} />
                                 <span>Material de Estudos</span>
                             </span>}>
                             <Menu.Item key="4"><Icon type="unlock" /> Nível  1 <Link to="./matstudy"></Link></Menu.Item>
-                            <Menu.Item key="5" disabled> <Icon type="lock"/>Nível 2</Menu.Item>
+                            <Menu.Item key="5" disabled> <Icon type="lock" />Nível 2</Menu.Item>
                             <SubMenu
                                 key="sub2"
                                 title={<span disabled><Icon type="lock" />
@@ -73,7 +76,7 @@ export default class Primary extends React.Component {
                             <Menu.Item key="12" disabled><Icon type="lock" /> Nível 4 </Menu.Item>
                         </SubMenu>
                         <Menu.Item key="13">
-                            <Icon type="star" style={{ fontSize: '20px' }}/>
+                            <Icon type="star" style={{ fontSize: '20px' }} />
                             <span>Avaliar</span>
                             <Link to="./Avaliation"></Link>
                         </Menu.Item>
@@ -84,6 +87,7 @@ export default class Primary extends React.Component {
                             <Menu.Item key="15"><Badge dot><Icon type="notification" />
                             </Badge> Notificações </Menu.Item>
                             <Menu.Item key="16"><Icon type="logout" /> Sair</Menu.Item>
+
                         </SubMenu>
                     </Menu>
                 </Header>
