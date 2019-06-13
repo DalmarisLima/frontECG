@@ -13,6 +13,7 @@ import {
 const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
 const { Title } = Typography;
+const key1 = "p2";
 
 const close = () => {
   console.log(
@@ -26,7 +27,7 @@ const openNotification3 = () => {
       <p>
         <strong>
           Parabéns!! Seu avatar evoluiu, você agora pode escolher entre o avatar
-          de Doutor(a), basta que o cliques
+          de Doutor(a), basta que o clique
         </strong>
       </p>
     </div>
@@ -44,7 +45,7 @@ const openNotification3 = () => {
 const openNotification = () => {
   const key = `open${Date.now()}`;
   const btn = (
-    <Button type="default" size="small" onClick={() => notification.close(key)}>
+    <Button type="default" size="small" onClick={() => notification.close(key1)}>
       Próxima Pergunta
     </Button>
   );

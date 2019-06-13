@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Row, Col } from 'antd';
-import Ques from '../components/quetions';
+import Ques from '../components/p1';
 import Video from '../components/video';
 import Text from '../components/text';
 import Tree from "../components/treeN1";
