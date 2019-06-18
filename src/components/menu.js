@@ -69,29 +69,15 @@ export default class Primary extends React.Component {
               }
             >
               <Menu.Item key="8">
-                <Icon type="unlock" /> Nível 1 <Link to="./Report" />
+                <Icon type="area-chart" /> Nível 1 <Link to="./Report" />
               </Menu.Item>
               <Menu.Item key="9" disabled>
                 {" "}
                 <Icon type="lock" /> Nível 2
               </Menu.Item>
-              <SubMenu
-                key="sub2"
-                title={
-                  <span disabled>
-                    <Icon type="lock" />
-                    <span>Nível 3</span>
-                  </span>
-                }
-              >
-                <Menu.Item key="10" disabled>
-                  <Icon type="lock" />
-                  Modulo 1{" "}
-                </Menu.Item>
-                <Menu.Item key="11" disabled>
-                  <Icon type="lock" /> Modulo 2{" "}
-                </Menu.Item>
-              </SubMenu>
+              <Menu.Item key="6" disabled>
+                <Icon type="lock" /> Nível 3{" "}
+              </Menu.Item>
               <Menu.Item key="12" disabled>
                 <Icon type="lock" /> Nível 4{" "}
               </Menu.Item>
