@@ -24,6 +24,7 @@ const openNotification3 = () => {
   const key = `open${Date.now()}`;
   const btn = (
     <div>
+      
       <p>
         <strong>
           Parabéns!! Seu avatar evoluiu, você agora pode escolher entre o avatar
@@ -109,7 +110,7 @@ const contentListNoTitle = {
                   type="default"
                   onClick={
                     (notification.close(openNotificationError.key),
-                    openNotificationError)
+                      openNotificationError)
                   }
                 >
                   A

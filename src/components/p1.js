@@ -45,6 +45,7 @@ function success2() {
   Modal.success({
     content: (
       <div>
+        <iframe src="https://giphy.com/embed/LpDmM2wSt6Hm5fKJVa" width="100%" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         <strong>
           Parabéns!! Seu avatar evoluiu, você agora pode escolher entre o avatar
           de Doutor(a), basta que o clique
@@ -148,6 +149,7 @@ const steps = [
 
               <Col span={24} style={{ marginTop: "15px" }}>
                 <Button type="default" onClick={success}>
+                  D
                 </Button>
                 Células musculares miocárdicas.
             </Col>
