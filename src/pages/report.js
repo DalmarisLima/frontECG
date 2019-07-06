@@ -5,14 +5,14 @@ import Tab from '../components/tableReport';
 
 const tabList = [{
     key: 'tab1',  
-    tab: 'Conteúdos',
+    tab: 'Evolução de Aprendizagem',
 }, {
     key: 'tab2',
-    tab: 'Evolução de Aprendizagem',
+    tab: 'Conteúdos',
 }];
 const contentList = {
-    tab1:  <Tab/>,
-    tab2: <div><Graphic/></div> 
+    tab1:  <div><Graphic/></div>,
+    tab2: <Tab/> 
 };
 
 export default class Reports extends React.Component {

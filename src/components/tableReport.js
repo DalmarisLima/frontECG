@@ -37,7 +37,7 @@ const data = [{
 
 <Card
               type="inner"
-              title={<Title level={4}>Ver titulo apropriado</Title>}>
+              title={<Title level={4}>Conteúdos</Title>}>
 
 
 
