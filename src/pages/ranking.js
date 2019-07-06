@@ -3,7 +3,7 @@ import { Card, Popover, Row, Col } from 'antd';
 import ListRanking from '../components/listRanking';
 import Table from '../components/tableRanking';
 import Paragraph from 'antd/lib/typography/Paragraph';
-import cora from './cora1.svg';
+import cora from './cora.svg';
 
 const text = <span>Ranking</span>;
 const content = (

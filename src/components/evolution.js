@@ -7,17 +7,16 @@ export default class Tabela extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col span={2}></Col>
-                    <Col span={6}>
-                    <Avatar src="https://img.icons8.com/dusk/100/000000/babys-room.png"/>
-                    
-                        <Progress
-                            status="active"
-                            strokeColor='#6CB6C9'
-                            strokeWidth="25px"
-                            percent={50} format={() =>  <Avatar src="https://img.icons8.com/dusk/64/000000/doctor-female.png"/>}/>
+                    <Col span={12}>
+                        <img src="https://img.icons8.com/dusk/100/000000/babys-room.png"/>
                     </Col>
-                    <Col span={8}></Col>
+                    <Col span={12}>
+                    
+                    <img src="https://img.icons8.com/dusk/64/000000/medical-doctor.png"/>
+                    </Col>
+                    <Col span={12}>
+                    <img src="https://img.icons8.com/dusk/64/000000/doctor-female.png"/>
+                    </Col>
                 </Row>
             </div >
         )

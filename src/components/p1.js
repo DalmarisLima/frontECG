@@ -12,6 +12,7 @@ import {
   Modal,
   Typography
 } from "antd";
+import Evol from '../components/evolution';
 
 const RadioGroup = Radio.Group;
 const { Step } = Steps;
@@ -45,7 +46,7 @@ function success2() {
   Modal.success({
     content: (
       <div>
-        <iframe src="https://giphy.com/embed/LpDmM2wSt6Hm5fKJVa" width="100%" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <Evol/>
         <strong>
           Parabéns!! Seu avatar evoluiu, você agora pode escolher entre o avatar
           de Doutor(a), basta que o clique
