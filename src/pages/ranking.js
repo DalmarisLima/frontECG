@@ -8,13 +8,11 @@ import cora from './cora.svg';
 const text = <span>Ranking</span>;
 const content = (
     <Paragraph strong={true}>
-         <img src={cora} className="Cora" alt="cora" />
-        <p> Seus acertos serão convertidos em pontos e</p>
-        <p> acumulados progressivamente.</p> 
-        <p>Se for de sua vontade participar,</p>
-        <p>você poderá visualizar sua posição no ranking</p> 
-        <p>com todos os alunos participantes do ECG tutor.</p>
-        <p>Vamos acessar o material de estudos agora?</p>
+        <img src={cora} className="Cora" alt="cora" style={{ marginLeft: '120px' }} />
+        <p> Seus acertos serão convertidos em pontos e acumulados progressivamente.</p>
+        <p>Se for de sua vontade participar, você poderá visualizar sua posição no ranking</p>
+        <p>com todos os alunos participantes do ECG tutor.Vamos acessar o material de</p>
+        <p>   estudos agora?</p>
     </Paragraph>
 
 );
@@ -45,16 +43,16 @@ export default class StudyMaterial extends React.Component {
 
                 <Row>
                     <Col span={24}>
-                    <Popover placement="top" content={content} title="Ranking">
-                        <Card
-                            style={{ width: '100%', marginTop: "70px" }}
-                            title="Ranking"
-                            tabList={tabList}
-                            activeTabKey={this.state.key}
-                            onTabChange={(key) => { this.onTabChange(key, 'key'); }}>
-                            {contentList[this.state.key]}
-                        
-                        </Card>
+                        <Popover placement="bottom" content={content} title="Ranking">
+                            <Card
+                                style={{ width: '100%', marginTop: "70px" }}
+                                title="Ranking"
+                                tabList={tabList}
+                                activeTabKey={this.state.key}
+                                onTabChange={(key) => { this.onTabChange(key, 'key'); }}>
+                                {contentList[this.state.key]}
+
+                            </Card>
                         </Popover>
 
                     </Col>
