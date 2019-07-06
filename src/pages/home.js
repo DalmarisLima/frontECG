@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Row, Popover } from "antd";
 import Feed from "../components/feed";
 import Paragraph from "antd/lib/typography/Paragraph";
-import cora from "./cora1.svg";
+import cora from "./cora.svg";
 
 const text = (
   <span>
@@ -10,21 +10,19 @@ const text = (
   </span>
 );
 const content = (
+
   <Paragraph strong={true}>
-    <img src={cora} className="Cora" alt="cora" />
-    <Paragraph>
-      <p> O ECG tutor é um sistema com inteligência artificial</p>
-      <p> capaz de individualizar seu aprendizado,</p>
-      <p>além de conter tecnologia de gamificação,</p>
-      <p>para que você se sinta engajado e motivado com seus estudos.</p>
-      <p>O curso é composto por etapas, sendo possível desbloquear a </p>
-      <p>próxima etapa apenas após concluir a anterior.</p>
-      <p>Antes de iniciar a primeira fase, você deve escolher um Avatar. </p>
-      <p>Vamos lá? É só clicar na área de perfil do usuário no canto </p>
-      <p>superior direito da tela.</p>
-      <p>Inicialmente, seu Avatar ainda é um bebê, </p>
-      <p>mas poderá evoluir após a conclusão da primeira fase.</p>
-    </Paragraph>
+
+    <img src={cora} className="Cora" alt="cora" style={{ marginLeft: '250px' }} />
+
+    <p>O ECG tutor é um sistema com inteligência artificial
+     capaz de individualizar seu aprendizado, além de conter tecnologia</p>
+    <p>de gamificação, para que você se sinta engajado e motivado com seus estudos.O curso é composto por etapas, sendo</p>
+    <p>possível desbloquear a próxima etapa apenas após concluir a anterior. Antes de iniciar a primeira fase, você deve escolher</p>
+    <p>um Avatar.Vamos lá? É só clicar na área de perfil do usuário no canto
+     superior direito da tela.Inicialmente, seu Avatar</p>
+    <p>ainda é um bebê, mas poderá evoluir após a conclusão da primeira fase.</p>
+
   </Paragraph>
 );
 
@@ -56,19 +54,20 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Popover placement="top" content={content} title={text}>
-          <Card
-            style={{ width: "100%", marginTop: "70px" }}
-            title="Início"
-            tabList={tablis}
-            activeTabKey={this.state.key}
-            onTabChange={key => {
-              this.onTabChange(key, "key");
-            }}
-          >
+        <Card
+          style={{ width: "100%", marginTop: "70px" }}
+          title="Início"
+          tabList={tablis}
+          activeTabKey={this.state.key}
+          onTabChange={key => {
+            this.onTabChange(key, "key");
+          }}
+        >
+          <Popover placement="bottom" title={text} content={content}>
             {contentList[this.state.key]}
-          </Card>
-        </Popover>
+          </Popover>
+        </Card>
+
       </div>
     );
   }

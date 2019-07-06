@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Col, Row } from 'antd';
 import Paragraph from 'antd/lib/typography/Paragraph';
-import cora from './cora.svg';
+import cora from './Cora.png';
 
 
 
@@ -10,7 +10,7 @@ export default class Carosel extends React.Component {
         return (
             <div style={{ padding: '30px' }}>
                 <Row gutter={16}>
-                    <Col span={8}>
+                    <Col span={16}>
                         <img src={cora} className="Cora" alt="cora" />
                     </Col>
                     <Col span={16}>
