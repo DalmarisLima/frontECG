@@ -10,19 +10,27 @@ const text = (
   </span>
 );
 const content = (
-
   <Paragraph strong={true}>
+    <img
+      src={cora}
+      className="Cora"
+      alt="cora"
+      style={{ marginLeft: "250px" }}
+    />
 
-    <img src={cora} className="Cora" alt="cora" style={{ marginLeft: '250px' }} />
-
-    <p>O ECG tutor é um sistema com inteligência artificial
-     capaz de individualizar seu aprendizado, além de conter tecnologia</p>
-    <p>de gamificação, para que você se sinta engajado e motivado com seus estudos.O curso é composto por etapas, sendo</p>
-    <p>possível desbloquear a próxima etapa apenas após concluir a anterior. Antes de iniciar a primeira fase, você deve escolher</p>
-    <p>um Avatar.Vamos lá? É só clicar na área de perfil do usuário no canto
-     superior direito da tela.Inicialmente, seu Avatar</p>
-    <p>ainda é um bebê, mas poderá evoluir após a conclusão da primeira fase.</p>
-
+    <p>
+      O ECG tutor é um sistema com inteligência artificial capaz de
+      individualizar seu aprendizado, além de conter tecnologia
+    </p>
+    <p>
+      de gamificação, para que você se sinta engajado e motivado com seus
+      estudos.O curso é composto por etapas, sendo
+    </p>
+    <p>possível desbloquear a próxima etapa apenas após concluir a anterior.</p>
+    <p>
+      Inicialmente, seu Avatar ainda é um bebê, mas poderá evoluir após a
+      conclusão da primeira fase.
+    </p>
   </Paragraph>
 );
 
@@ -67,7 +75,6 @@ export default class Home extends React.Component {
             {contentList[this.state.key]}
           </Popover>
         </Card>
-
       </div>
     );
   }
