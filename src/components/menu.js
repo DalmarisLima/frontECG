@@ -97,7 +97,7 @@ export default class Primary extends React.Component {
               }
             >
               <Menu.Item key="14">
-                <Icon type="user" /> Pefil
+                <Icon type="user" /> Perfil
               </Menu.Item>
               <Menu.Item key="15">
                 <Badge dot>
