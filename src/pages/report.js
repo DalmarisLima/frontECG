@@ -8,7 +8,7 @@ const tabList = [{
     tab: 'Evolução de Aprendizagem',
 }, {
     key: 'tab2',
-    tab: 'Conteúdos',
+    tab: 'Conteúdos ',
 }];
 const contentList = {
     tab1:  <div><Graphic/></div>,
