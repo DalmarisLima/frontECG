@@ -69,7 +69,8 @@ function success2() {
         <Evol />
         <strong>
           Parabéns!! Seu avatar evoluiu, você agora pode escolher entre o avatar
-          de Doutor(a), basta que o clique
+          de Doutor(a), basta que o clique na parte de perfil da barra de menu
+          superior
         </strong>
       </div>
     ),
