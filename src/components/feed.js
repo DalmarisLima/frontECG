@@ -11,7 +11,7 @@ const content = (
         <p>Na página inicial é possivel acessar  as últimas notícias de todos os usuários do ECG Tutor</p>
 
         
-        <p>Agora que já viu as últimas novidades, seria interessante acessar o <Icon type="trophy" style={{ fontSize: "20px" }} /> RANKING. CliCa lá! </p>
+        <p>Agora que já viu as últimas novidades, seria interessante acessar o <Icon type="trophy" style={{ fontSize: "20px" }} /> RANKING. Clica lá! </p>
     </div>
 );
 
