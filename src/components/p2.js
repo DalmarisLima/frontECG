@@ -14,7 +14,7 @@ const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
 const { Title } = Typography;
 const key1 = "p2";
-
+https://www.health-tutor.com/sinus-bradycardia-ecg.html
 const close = () => {
   console.log(
     "Notification was closed. Either the close button was clicked or duration time elapsed."

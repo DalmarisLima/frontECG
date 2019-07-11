@@ -16,44 +16,10 @@ import Evol from "../components/evolution";
 
 const RadioGroup = Radio.Group;
 const { Step } = Steps;
-const close = () => {
-  console.log(
-    "Notification was closed. Either the close button was clicked or duration time elapsed."
-  );
-};
 
 const dica = () => {
-  message.success("Letra E", 1);
+  message.success("Reler material de apoio", 1);
 };
-const dica2 = () => {
-  message.success("Letra D", 1);
-};
-const dica3 = () => {
-  message.success("Letra E", 1);
-};
-
-function info() {
-  Modal.info({
-    title: "Lamento, resposta incorreta",
-    content: <Button onClick={dica}>Dica</Button>,
-    onOk() {}
-  });
-}
-function info2() {
-  Modal.info({
-    title: "Lamento, resposta incorreta",
-    content: <Button onClick={dica2}>Dica</Button>,
-    onOk() {}
-  });
-}
-
-function info3() {
-  Modal.info({
-    title: "Lamento, resposta incorreta",
-    content: <Button onClick={dica3}>Dica</Button>,
-    onOk() {}
-  });
-}
 
 function success() {
   Modal.success({
@@ -62,70 +28,57 @@ function success() {
   });
 }
 
-function success2() {
-  Modal.success({
-    content: (
-      <div>
-        <Evol />
-        <strong>
-          Parabéns!! Seu avatar evoluiu, você agora pode escolher entre o avatar
-          de Doutor(a), basta que o clique na parte de perfil da barra de menu
-          superior
-        </strong>
-      </div>
-    ),
-    next() {
-      const current = this.state.current + 1;
-      this.setState({ current });
-    },
+function info() {
+  Modal.info({
+    title: "Lamento, resposta incorreta",
+    content: <Button onClick={dica}>Dica</Button>,
     onOk() {}
   });
 }
 
 const steps = [
   {
-    title: "Pergunta 1",
+    title: "Caso Clínico: ",
     content: (
       <div>
         <p>
-          (MEDELETRO VOL 1) Que derivação avalia a corrente elétrica na direção
-          do braço direito para o braço esquerdo?
+          Identificação: R. A. S., 33 anos, solteiro, empresário <br />
+          Cenário: consultório médico <br />
+          Queixa: assintomático O paciente nega comorbidades, uso de
+          medicamento, uso de drogas ilícitas, cirurgias, traumas ou
+          hemotransfusão.
+          <br /> Ao examiná-lo, você nota bom estado geral, eupneico, hidratado,
+          corado, afebril. Exame neurológico, respiratório, cardiovascular e
+          abdominal normais.
+          <br /> O ECG trazido pelo paciente está exibido abaixo:
+          <br />
+          <img src="https://www.health-tutor.com/files/content/ECG/Sinus_bradycardia_ecg.jpg" />
         </p>
+      </div>
+    )
+  },
+  {
+    title: "Pergunta 1:",
+    content: (
+      <div>
+        Com base nas informações apresentadas, responda: Qual o ritmo
+        apresentado no ECG acima?
         <Row>
           <Col span={24}>
             <RadioGroup buttonStyle="solid">
               <Row>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={success}>
                     A
                   </Button>
-                  V1
+                  Sinusal
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
                   <Button type="default" onClick={info}>
                     B
                   </Button>
-                  DII
-                </Col>
-                <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
-                    C
-                  </Button>
-                  V2
-                </Col>
-
-                <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
-                    D
-                  </Button>
-                  aVF
-                </Col>
-                <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={success}>
-                    E
-                  </Button>
-                  DI
+                  Não sinusal
                 </Col>
               </Row>
             </RadioGroup>
@@ -135,50 +88,32 @@ const steps = [
     )
   },
   {
-    title: "Pergunta 2",
+    title: "Pergunta 2:",
     content: (
       <div>
-        <p>
-          (MEDELETRO VOL 1) Para a adequada definição do eixo elétrico da
-          despolarização ventricular (QRS) no plano frontal, quais são as 2
-          primeiras derivações que devem ser analisadas?
-        </p>
+        Onde está o eixo elétrico do ECG acima?
         <Row>
           <Col span={24}>
             <RadioGroup buttonStyle="solid">
               <Row>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info2}>
+                  <Button type="default" onClick={info}>
                     A
                   </Button>
-                  DI e DII
-                </Col>
-
-                <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info2}>
-                    B
-                  </Button>
-                  V1 e V2
-                </Col>
-                <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info2}>
-                    C
-                  </Button>
-                  DII e DIII
+                  Entre -45 e 0 graus
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
                   <Button type="default" onClick={success}>
-                    D
+                    B
                   </Button>
-                  DI e aVF
+                  Entre 0 e +90 graus
                 </Col>
-
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info2}>
-                    E
+                  <Button type="default" onClick={info}>
+                    C
                   </Button>
-                  DIII e aVL
+                  Entre +90 e +180 graus
                 </Col>
               </Row>
             </RadioGroup>
@@ -188,49 +123,110 @@ const steps = [
     )
   },
   {
-    title: "Pergunta 3",
+    title: "Pergunta 3:",
     content: (
       <div>
-        <p>
-          (MEDELETRO VOL 1) No eletrocardiograma, a onda T representa que fase
-          da atividade elétrica do coração?
-        </p>
+        Qual a frequência cardíaca detectada no ECG acima?
         <Row>
           <Col span={24}>
             <RadioGroup buttonStyle="solid">
               <Row>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info3}>
+                  <Button type="default" onClick={success}>
                     A
                   </Button>
-                  Despolarização atrial.
+                  Aproximadamente 45 bpm
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info3}>
+                  <Button type="default" onClick={info}>
                     B
                   </Button>
-                  Repolarização atrial.
+                  Aproximadamente 60bpm
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info3}>
+                  <Button type="default" onClick={info}>
                     C
                   </Button>
-                  Condução do estímulo através do nodo atrioventricular.
+                  Aproximadamente 75bpm
                 </Col>
-
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info3}>
+                  <Button type="default" onClick={info}>
                     D
                   </Button>
-                  Despolarização ventricular.
+                  Maior que 100bpm
+                </Col>
+              </Row>
+            </RadioGroup>
+          </Col>
+        </Row>
+      </div>
+    )
+  },
+  {
+    title: "Pergunta 4:",
+    content: (
+      <div>
+        Como você interpreta a frequência cardíaca encontrada?
+        <Row>
+          <Col span={24}>
+            <RadioGroup buttonStyle="solid">
+              <Row>
+                <Col span={24} style={{ marginTop: "15px" }}>
+                  <Button type="default" onClick={info}>
+                    A
+                  </Button>
+                  Normal
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={success2}>
-                    E
+                  <Button type="default" onClick={success}>
+                    B
                   </Button>
-                  Repolarização ventricular.
+                  Bradicardia
+                </Col>
+                <Col span={24} style={{ marginTop: "15px" }}>
+                  <Button type="default" onClick={info}>
+                    C
+                  </Button>
+                  Taquicardia
+                </Col>
+              </Row>
+            </RadioGroup>
+          </Col>
+        </Row>
+      </div>
+    )
+  },
+  {
+    title: "Pergunta 5:",
+    content: (
+      <div>
+        Pensando na principal suspeita clínica, que conduta você adotaria?
+        <Row>
+          <Col span={24}>
+            <RadioGroup buttonStyle="solid">
+              <Row>
+                <Col span={24} style={{ marginTop: "15px" }}>
+                  <Button type="default" onClick={success}>
+                    A
+                  </Button>
+                  Orientação para procurar um cardiologista devido à FC alterada
+                </Col>
+
+                <Col span={24} style={{ marginTop: "15px" }}>
+                  <Button type="default" onClick={info}>
+                    B
+                  </Button>
+                  Tranquilizaria o paciente, pois a FC está normal
+                </Col>
+                <Col span={24} style={{ marginTop: "15px" }}>
+                  <Button type="default" onClick={info}>
+                    C
+                  </Button>
+                  Tranquilizaria o paciente, pois apesar da FC estar alterada,
+                  trata-se de fenômeno fisiológico decorrente da prática de
+                  exercícios físicos
                 </Col>
               </Row>
             </RadioGroup>
@@ -241,7 +237,7 @@ const steps = [
   }
 ];
 
-export default class Ques extends React.Component {
+export default class CasoClinico extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -266,7 +262,7 @@ export default class Ques extends React.Component {
         <div className="steps-action">
           {current < steps.length - 1 && (
             <Button type="primary" onClick={() => this.next()}>
-              Próxima Pergunta
+              Próxima etapa
             </Button>
           )}
         </div>

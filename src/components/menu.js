@@ -44,13 +44,13 @@ export default class Primary extends React.Component {
                 </span>
               }
             >
-              <Menu.Item key="4">
-                <Icon type="file-text" /> Nível 1 <Link to="./matstudy" />
+              <Menu.Item key="4" disabled>
+                <Icon type="lock" /> Nível 1
               </Menu.Item>
-              <Menu.Item key="5" disabled>
+              <Menu.Item key="5">
                 {" "}
-                <Icon type="lock" />
-                Nível 2
+                <Icon type="file-text" />
+                Nível 2 <Link to="./matstudy" />
               </Menu.Item>
               <Menu.Item key="6" disabled>
                 <Icon type="lock" /> Nível 3{" "}
