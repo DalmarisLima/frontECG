@@ -6,18 +6,23 @@ import Paragraph from 'antd/lib/typography/Paragraph';
 import { AST_Label } from 'terser';
 import cora from "./cora.svg";
 
+
+const { Title } = Typography;
+
 const content = (
     <div>
-        <p>Somente é possível desbloquear o próximo nível após concluir o anterior.</p>
-        <p>Por isso, agora, você tem acesso apenas ao Nível 1.</p>
-        <p>Mas já pode dar uma olhada em toda árvore do conhecimento.</p>
+        <Title level={4}>
+            <p>Somente é possível desbloquear o próximo nível após concluir o anterior.</p>
+            <p>Mas vamos fazer uma coisa bem legal, por isso vamos começar do nivel 2.</p>
+            <p>Mas já pode dar uma olhada em toda árvore do conhecimento.</p>
 
 
-        <p>Sobre cada assunto, você tem disponível:</p>
-        <p>- Material de texto</p>
-        <p>- Material de vídeo</p>
-        <p>- Questões (praticar)</p>
-        <p>Agora, dá um clique em cada um deles!</p>
+            <p>Sobre cada assunto, você tem disponível:</p>
+            <p>- Material de texto</p>
+            <p>- Material de vídeo</p>
+            <p>- Questões (praticar)</p>
+            <p>Agora, dá um clique em cada um deles!</p>
+        </Title>
     </div>
 );
 
@@ -27,7 +32,7 @@ const styles = {
         width: 500,
     },
 };
-const { Title } = Typography;
+
 
 function PositionedTooltips(props) {
     const { classes } = props;
@@ -44,7 +49,7 @@ function PositionedTooltips(props) {
                         <Divider orientation="left"> <Title level={3}>Nível 1: Eletrofisiologia cardíaca</Title></Divider>
 
                         <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
-                            <Col span={8}>
+                            <Col >     
                             </Col>
                             <Col span={8}><Progress
                                 type="circle"
@@ -52,18 +57,22 @@ function PositionedTooltips(props) {
                                 width='100px'
                                 strokeWidth='10' />
                                 <Paragraph strong={true}>Potencial de ação</Paragraph>
-                                <Popover content={content} placement="right"
-
-                                    trigger="hover">
-                                    <img
-                                        src={cora}
-                                        className="Cora"
-                                        alt="cora"
-                                        style={{ marginLeft: "250px" }}
-                                    />
-                                </Popover>
+                                
                             </Col>
-                            <Col span={8}></Col>
+                            <Col >
+
+
+                            <Popover content={content} placement="right"
+
+trigger="hover">
+<img
+    src={cora}
+    className="Cora"
+    alt="cora"
+    style={{ marginLeft: "250px" }}
+/>
+</Popover>
+                            </Col>
                         </Row>
 
                         <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">

@@ -71,9 +71,9 @@ export default class Home extends React.Component {
             this.onTabChange(key, "key");
           }}
         >
-          <Popover placement="bottom" title={text} content={content}>
+        
             {contentList[this.state.key]}
-          </Popover>
+         
         </Card>
       </div>
     );

@@ -4,18 +4,19 @@ import moment from 'moment';
 import cora from "./cora.svg";
 import Paragraph from 'antd/lib/typography/Paragraph';
 
+const { Title } = Typography;
 
 
 const content = (
     <div>
-        <p>Na página inicial é possivel acessar  as últimas notícias de todos os usuários do ECG Tutor</p>
+       <Title level={4}>Na página inicial é possivel acessar  as últimas notícias de todos os usuários do ECG Tutor</Title>
 
         
-        <p>Agora que já viu as últimas novidades, seria interessante acessar o <Icon type="trophy" style={{ fontSize: "20px" }} /> RANKING. Clica lá! </p>
+        <Title level ={4}><p>Agora que já viu as últimas novidades, seria interessante acessar o <Icon type="trophy" style={{ fontSize: "20px" }} /> RANKING. Clica lá! </p></Title>
     </div>
 );
 
-const { Title } = Typography;
+
 
 export default class Feed extends React.Component {
     state = {
@@ -84,7 +85,7 @@ export default class Feed extends React.Component {
                             <Timeline pending="Carregando..." reverse={this.state.reverse}>
 
                                 <Row>
-                                    <Col span={12}>
+                                    <Col span={16}>
                                         <Timeline.Item>
                                             <Comment
                                                 actions={actions}
@@ -109,7 +110,7 @@ export default class Feed extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col span={12}>
+                                    <Col span={16}>
                                         <Timeline.Item>
                                             <Comment
                                                 actions={actions}
