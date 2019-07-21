@@ -10,10 +10,27 @@ import {
   Avatar,
   Typography
 } from "antd";
+import cora from "./cora.svg";
 const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
 const { Title } = Typography;
 const key1 = "p2";
+
+const { Title } = Typography;
+
+
+const content = (
+  <div>
+    <Title level={4}>O link para os vídeos citados no material de texto sobre Eletrofisiologia Cardíaca estão disponíveis aqui. 
+</Title>
+
+
+    <Title level={4}>Quando você achar que está pronto, clica em PRATICAR para responder às 3 questões sobre o assunto!
+</Title>
+  </div>
+);
+
+
 
 const close = () => {
   console.log(

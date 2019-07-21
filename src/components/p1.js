@@ -10,9 +10,26 @@ import {
   notification,
   Card,
   Modal,
+  Popover,
   Typography
 } from "antd";
 import Evol from "../components/evolution";
+import cora from "./cora.svg";
+
+
+const { Title } = Typography;
+
+
+const content = (
+  <div>
+    <Title level={4}>Se você acertar as 3 questões sobre Eletrofisiologia Cardíaca, seu Avatar poderá evoluir.
+Vamos tentar?
+
+</Title>
+
+  </div>
+);
+
 
 const RadioGroup = Radio.Group;
 const { Step } = Steps;
@@ -36,14 +53,14 @@ function info() {
   Modal.info({
     title: "Lamento, resposta incorreta",
     content: <Button onClick={dica}>Dica</Button>,
-    onOk() {}
+    onOk() { }
   });
 }
 function info2() {
   Modal.info({
     title: "Lamento, resposta incorreta",
     content: <Button onClick={dica2}>Dica</Button>,
-    onOk() {}
+    onOk() { }
   });
 }
 
@@ -51,14 +68,14 @@ function info3() {
   Modal.info({
     title: "Lamento, resposta incorreta",
     content: <Button onClick={dica3}>Dica</Button>,
-    onOk() {}
+    onOk() { }
   });
 }
 
 function success() {
   Modal.success({
     title: "Parabéns! Resposta Correta!",
-    onOk() {}
+    onOk() { }
   });
 }
 
@@ -78,7 +95,7 @@ function success2() {
       const current = this.state.current + 1;
       this.setState({ current });
     },
-    onOk() {}
+    onOk() { }
   });
 }
 
@@ -121,7 +138,7 @@ const steps = [
                   </Button>
                   aVF
                 </Col>
-                <Col span={24} style={{ marginTop: "15px" }}>
+                <Col span={12} style={{ marginTop: "15px" }}>
                   <Button type="default" onClick={success}>
                     E
                   </Button>
@@ -129,6 +146,15 @@ const steps = [
                 </Col>
               </Row>
             </RadioGroup>
+            <Popover content={content} placement="top"
+              trigger="hover">
+              <img
+                src={cora}
+                className="Cora"
+                alt="cora"
+                style={{ marginLeft: "250px" }}
+              />
+            </Popover>
           </Col>
         </Row>
       </div>

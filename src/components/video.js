@@ -1,6 +1,20 @@
 import React from "react";
-import { Steps, Button, Radio } from "antd";
-import Evol from "../components/evolution";
+import { Steps, Button, Radio, Icon, Typography, Popover } from "antd";
+import cora from "./cora.svg";
+
+const { Title } = Typography;
+
+
+const content = (
+  <div>
+    <Title level={4}>O link para os vídeos citados no material de texto sobre Eletrofisiologia Cardíaca estão disponíveis aqui. 
+</Title>
+
+
+    <Title level={4}>Quando você achar que está pronto, clica em PRATICAR para responder às 3 questões sobre o assunto!
+</Title>
+  </div>
+);
 
 const RadioGroup = Radio.Group;
 const { Step } = Steps;
@@ -18,6 +32,16 @@ const steps = [
             src="https://www.youtube.com/embed/kwLbSx9BNbU?controls=0&showinfo=0"
           />
         </a>
+        <Popover content={content} placement="top"
+
+          trigger="hover">
+          <img
+            src={cora}
+            className="Cora"
+            alt="cora"
+            style={{ marginLeft: "250px" }}
+          />
+        </Popover>
       </div>
     )
   },
