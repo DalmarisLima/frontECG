@@ -4,35 +4,84 @@ import {
   Button,
   message,
   Radio,
-  Alert,
   Row,
   Col,
-  notification,
-  Card,
   Modal,
+  Popover,
   Typography
 } from "antd";
-import Evol from "../components/evolution";
+import cora from "./cora.svg";
+
+const { Title } = Typography;
+
+
+const content = (
+  <div>
+    <Title level={4}>Aqui, temos uma simulação de um caso clínico real e relato do paciente.  Você pode tentar ajudá-lo?</Title>
+  </div>
+);
+
 
 const RadioGroup = Radio.Group;
 const { Step } = Steps;
 
-const dica = () => {
-  message.success("Reler material de apoio", 1);
+const dica1 = () => {
+  message.success("Para reconhecer se o ritmo é sinusal ou não, lembre- se de olhar a onda nas derivações da parede inferior (DII, DIII e aVF)", 5);
 };
+const dica2 = () => {
+  message.success("Que tal olhar novamente o QRS nas derivações DI e aVF?", 5);
+};
+const dica3 = () => {
+  message.success(" Existem maneiras práticas para calcular a FC pelo ECG. Seria legal dar uma olhada no texto novamente. É bem rapidinho.", 5);
+};
+const dica4 = () => {
+  message.success(" A diretriz brasileira sobre interpretação de ECG define de forma objetiva a faixa de FC normal. É interessante que você  não confunda com definições mais antigas. Dá uma conferida lá no texto de novo.", 5);
+};
+const dica5 = () => {
+  message.success("A FC no atleta sofre interferência direita da modulação adrenégica, havendo predomínio da ação da acetilcolina.", 5);
+};
+
 
 function success() {
   Modal.success({
     title: "Parabéns! Resposta Correta!",
-    onOk() {}
+    onOk() { }
   });
 }
 
-function info() {
+function info1() {
   Modal.info({
     title: "Lamento, resposta incorreta",
-    content: <Button onClick={dica}>Dica</Button>,
-    onOk() {}
+    content: <Button onClick={dica1}>Dica</Button>,
+    onOk() { }
+  });
+}
+function info2() {
+  Modal.info({
+    title: "Lamento, resposta incorreta",
+    content: <Button onClick={dica2}>Dica</Button>,
+    onOk() { }
+  });
+}
+function info3() {
+  Modal.info({
+    title: "Lamento, resposta incorreta",
+    content: <Button onClick={dica3}>Dica</Button>,
+    onOk() { }
+  });
+}
+function info4() {
+  Modal.info({
+    title: "Lamento, resposta incorreta",
+    content: <Button onClick={dica4}>Dica</Button>,
+    onOk() { }
+  });
+}
+function info5() {
+  Modal.info({
+    title: "Lamento, resposta incorreta",
+    content: <Button onClick={dica5}>Dica</Button>,
+    onOk() { }
   });
 }
 
@@ -41,19 +90,35 @@ const steps = [
     title: "Caso Clínico: ",
     content: (
       <div>
-        <p>
-          Identificação: R. A. S., 33 anos, solteiro, empresário <br />
-          Cenário: consultório médico <br />
-          Queixa: assintomático O paciente nega comorbidades, uso de
-          medicamento, uso de drogas ilícitas, cirurgias, traumas ou
-          hemotransfusão.
+        <Row>
+          <Col span={12}>
+
+            <p>
+              Identificação: R. A. S., 33 anos, solteiro, empresário <br />
+              Cenário: consultório médico <br />
+              Queixa: assintomático O paciente nega comorbidades, uso de
+              medicamento, uso de drogas ilícitas, cirurgias, traumas ou
+              hemotransfusão.
           <br /> Ao examiná-lo, você nota bom estado geral, eupneico, hidratado,
-          corado, afebril. Exame neurológico, respiratório, cardiovascular e
-          abdominal normais.
+                    corado, afebril. Exame neurológico, respiratório, cardiovascular e
+                    abdominal normais.
           <br /> O ECG trazido pelo paciente está exibido abaixo:
           <br />
-          <img src="https://www.health-tutor.com/files/content/ECG/Sinus_bradycardia_ecg.jpg" />
-        </p>
+              <img src="https://www.health-tutor.com/files/content/ECG/Sinus_bradycardia_ecg.jpg" />
+            </p>
+          </Col>
+          <Col>
+            <Popover content={content} placement="top"
+              trigger="hover">
+              <img
+                src={cora}
+                className="Cora"
+                alt="cora"
+                style={{ marginLeft: "250px" }}
+              />
+            </Popover>
+          </Col>
+        </Row>
       </div>
     )
   },
@@ -75,7 +140,7 @@ const steps = [
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info1}>
                     B
                   </Button>
                   Não sinusal
@@ -97,7 +162,7 @@ const steps = [
             <RadioGroup buttonStyle="solid">
               <Row>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info2}>
                     A
                   </Button>
                   Entre -45 e 0 graus
@@ -110,7 +175,7 @@ const steps = [
                   Entre 0 e +90 graus
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info2}>
                     C
                   </Button>
                   Entre +90 e +180 graus
@@ -139,19 +204,19 @@ const steps = [
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info3}>
                     B
                   </Button>
                   Aproximadamente 60bpm
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info3}>
                     C
                   </Button>
                   Aproximadamente 75bpm
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info3}>
                     D
                   </Button>
                   Maior que 100bpm
@@ -173,7 +238,7 @@ const steps = [
             <RadioGroup buttonStyle="solid">
               <Row>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info4}>
                     A
                   </Button>
                   Normal
@@ -186,7 +251,7 @@ const steps = [
                   Bradicardia
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info4}>
                     C
                   </Button>
                   Taquicardia
@@ -215,13 +280,13 @@ const steps = [
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info5}>
                     B
                   </Button>
                   Tranquilizaria o paciente, pois a FC está normal
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info}>
+                  <Button type="default" onClick={info5}>
                     C
                   </Button>
                   Tranquilizaria o paciente, pois apesar da FC estar alterada,

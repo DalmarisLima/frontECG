@@ -1,40 +1,29 @@
 import React from "react";
-import { Card, Col, Row, Popover } from "antd";
+import { Card, Col, Row, Popover, Typography } from "antd";
 import Feed from "../components/feed";
 import Paragraph from "antd/lib/typography/Paragraph";
 import cora from "./cora.svg";
 
-const text = (
-  <span>
-    Olá! Eu sou a Cora e estou aqui para ajudar a navegar no ECG Tutor.
-  </span>
-);
-const content = (
-  <Paragraph strong={true}>
-    <img
-      src={cora}
-      className="Cora"
-      alt="cora"
-      style={{ marginLeft: "250px" }}
-    />
+const { Title } = Typography;
 
-    <p>
-      O ECG tutor é um sistema com inteligência artificial capaz de
-      individualizar seu aprendizado, além de conter tecnologia
-    </p>
-    <p>
-      de gamificação, para que você se sinta engajado e motivado com seus
-      estudos.O curso é composto por etapas, sendo
-    </p>
-    <p>possível desbloquear a próxima etapa apenas após concluir a anterior.</p>
-    <p>
-      Inicialmente, seu Avatar ainda é um bebê, mas poderá evoluir após a
-      conclusão da primeira fase.
-    </p>
-  </Paragraph>
+const content = (
+
+  <div>
+    <Title level={4}> <p>O ECG tutor é um sistema com inteligência artificial capaz de</p>
+      <p>individualizar seu aprendizado, além de conter tecnologia</p>
+      <p>de gamificação, para que você se sinta engajado e motivado com seus</p>
+      <p>estudos. O curso é composto por etapas, sendo </p>
+      <p>possível desbloquear a próxima etapa apenas após concluir a anterior.</p>
+      <p>Inicialmente, seu Avatar ainda é um bebê, mas poderá evoluir após a</p>
+      <p> conclusão da primeira fase.</p></Title>
+  </div>
 );
 
 const tablis = [
+  {
+    key: "tab1",
+    tab: "Feed Notícias"
+  },
   {
     key: "tab2",
     tab: "Feed Notícias"
@@ -42,6 +31,20 @@ const tablis = [
 ];
 
 const contentList = {
+  tab1: (
+    <div>
+      <Popover content={content} placement="right"
+
+        trigger="hover">
+        <img
+          src={cora}
+          className="Cora"
+          alt="cora"
+          style={{ marginLeft: "250px" }}
+        />
+      </Popover>
+    </div>
+  ),
   tab2: (
     <div>
       <Feed />
@@ -51,7 +54,7 @@ const contentList = {
 
 export default class Home extends React.Component {
   state = {
-    key: "tab2"
+    key: "tab1"
   };
 
   onTabChange = (key, type) => {
@@ -71,9 +74,9 @@ export default class Home extends React.Component {
             this.onTabChange(key, "key");
           }}
         >
-        
-            {contentList[this.state.key]}
-         
+
+          {contentList[this.state.key]}
+
         </Card>
       </div>
     );

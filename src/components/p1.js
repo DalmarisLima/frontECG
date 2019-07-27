@@ -40,13 +40,13 @@ const close = () => {
 };
 
 const dica = () => {
-  message.success("Letra E", 1);
+  message.success("Para reconhecer se o ritmo é sinusal ou não, lembre- se de olhar a onda nas derivações da parede inferior (DII, DIII e aVF)", 5);
 };
 const dica2 = () => {
-  message.success("Letra D", 1);
+  message.success(" Com essas derivações é possível determinar em qual quadrante está o eixo elétrico do coração. Esse deve ser sempre o primeiro passo para localizá-lo. Procure no texto a parte sobre EIXO. Você vai entender tudo rapidinho!", 5);
 };
 const dica3 = () => {
-  message.success("Letra E", 1);
+  message.success("Podemos encontrar a onda T, uma deflexão negativa, ao final do traçado eletrocardiográfico. Tente lembrar do percurso do estímulo elétrico pelo coração – isso pode te ajudar! Em todo caso, na parte do texto sobre TRAÇADO NO ECG você encontrará a resposta.", 5);
 };
 
 function info() {
@@ -84,11 +84,11 @@ function success2() {
     content: (
       <div>
         <Evol />
-        <strong>
-          Parabéns!! Seu avatar evoluiu, você agora pode escolher entre o avatar
-          de Doutor(a), basta que o clique na parte de perfil da barra de menu
-          superior
-        </strong>
+        <Title level={4}>
+          Parabéns!!!
+   Você não é mais um bebê!
+Seu avatar evoluiu! </Title>
+
       </div>
     ),
     next() {
