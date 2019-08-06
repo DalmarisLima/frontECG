@@ -10,7 +10,8 @@ const { Title } = Typography;
 
 const content = (
   <div>
-    <Title level={4}>Aqui, posso sinalizar seus pontos fortes e fracos, fornecendo dicas para um melhor aproveitamento.</Title>
+    <Title level={4}>Aqui, posso sinalizar seus pontos fortes e fracos. No gráfico poderemos ver seu progresso e número de acerto a cada Nível.</Title>
+    <Title level={4}>Agora vamos dar uma olhada nos conteúdes que você já viu. Vamos lá, clique em CONTEÚDOS.</Title>
   </div>
 );
 
@@ -18,11 +19,11 @@ const content = (
 
 
 const data = [
-  { name: 'Início', Desempenho: 0, amt: 0 },
-  { name: 'Nível 1', Desempenho: 0, amt: 0 },
-  { name: 'Nível 2', Desempenho: 50, amt: 50 },
-  { name: 'Nível 3', Desempenho: 0, amt: 0 },
-  { name: 'Nível 4', Desempenho: 0, amt: 0 },
+  { name: 'Início', Acertos: 0, amt: 0 },
+  { name: 'Nível 1', Acertos: 0, amt: 0 },
+  { name: 'Nível 2', Acertos: 3, amt: 3 },
+  { name: 'Nível 3', Acertos: 0, amt: 0 },
+  { name: 'Nível 4', Acertos: 0, amt: 0 },
 
 ];
 
@@ -49,7 +50,7 @@ export default class Graphic extends PureComponent {
               <XAxis dataKey="name" />
               <YAxis />
               <Tooltip />
-              <Area type="monotone" dataKey="Desempenho" stroke='#6CB6C9' fill='#6CB6C9' />
+              <Area type="monotone" dataKey="Acertos" stroke='#6CB6C9' fill='#6CB6C9' />
             </AreaChart>
           </ResponsiveContainer>
         </div>

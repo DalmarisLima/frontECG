@@ -21,7 +21,8 @@ const content = (
             <p>- Material de texto</p>
             <p>- Material de vídeo</p>
             <p>- Questões (praticar)</p>
-            <p>Agora, dá um clique em cada um deles!</p>
+            <p>Aproveite o momento para ler o texto. Ele vai te ajudar a responder às questões.</p>
+            <p>Agora cliquem em MATERIAL DE TEXTO  e logo depois veja um vídeo, isso vai te ajudar bastante!</p>
         </Title>
     </div>
 );

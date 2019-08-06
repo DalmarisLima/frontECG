@@ -8,13 +8,7 @@ export default class Tabela extends React.Component {
             
                 <Row>
                     <Col span={24}>
-                        <iframe
-                            frameborder="0"
-                            id="iframeF8W9K9X8T1M3S7J2T"
-                            src="https://www.survio.com/survey/i/F8W9K9X8T1M3S7J2T"
-                            height="800"
-                            width="100%">
-                        </iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSejWGTxRCjmomS_BW5MNc8Lz_KzACEkFannZoA84BDM9waAZw/viewform?embedded=true" width="1200" height="2000" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
                     </Col>
                 </Row>
             
