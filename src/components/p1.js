@@ -111,7 +111,15 @@ const steps = [
         <Row>
           <Col span={24}>
             <RadioGroup buttonStyle="solid">
-              <Row>
+              <Popover content={content} placement="top"
+              trigger="hover">
+              <img
+                src={cora}
+                className="Cora"
+                alt="cora"
+                style={{ marginLeft: "250px" }}
+              />
+            </Popover><Row>
                 <Col span={24} style={{ marginTop: "15px" }}>
                   <Button type="default" onClick={info}>
                     A
@@ -146,15 +154,7 @@ const steps = [
                 </Col>
               </Row>
             </RadioGroup>
-            <Popover content={content} placement="top"
-              trigger="hover">
-              <img
-                src={cora}
-                className="Cora"
-                alt="cora"
-                style={{ marginLeft: "250px" }}
-              />
-            </Popover>
+            
           </Col>
         </Row>
       </div>
@@ -239,7 +239,7 @@ const steps = [
                   Repolarização atrial.
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info3}>
+                  <Button type="default" onClick={success2}>
                     C
                   </Button>
                   Condução do estímulo através do nodo atrioventricular.
@@ -253,7 +253,7 @@ const steps = [
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={success2}>
+                  <Button type="default" onClick={info3}>
                     E
                   </Button>
                   Repolarização ventricular.

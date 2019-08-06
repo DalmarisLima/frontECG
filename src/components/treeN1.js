@@ -13,7 +13,7 @@ const content = (
     <div>
         <Title level={4}>
             <p>Somente é possível desbloquear o próximo nível após concluir o anterior.</p>
-            <p>Mas vamos fazer uma coisa bem legal, por isso vamos começar do nivel 2.</p>
+            <p>No momento, vamos começar do nivel 2.</p>
             <p>Mas já pode dar uma olhada em toda árvore do conhecimento.</p>
 
 
@@ -21,8 +21,7 @@ const content = (
             <p>- Material de texto</p>
             <p>- Material de vídeo</p>
             <p>- Questões (praticar)</p>
-            <p>Aproveite o momento para ler o texto. Ele vai te ajudar a responder às questões.</p>
-            <p>Agora cliquem em MATERIAL DE TEXTO  e logo depois veja um vídeo, isso vai te ajudar bastante!</p>
+            <p>Agora, dá um clique em cada um deles!</p>
         </Title>
     </div>
 );
@@ -47,23 +46,9 @@ function PositionedTooltips(props) {
             >
                 <Row>
                     <Col span={24}>
-                        <Divider orientation="left"> <Title level={3}>Nível 1: Eletrofisiologia cardíaca</Title></Divider>
-
-                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
-                            <Col >     
-                            </Col>
-                            <Col span={8}><Progress
-                                type="circle"
-                                percent={100} format={() => <img src="https://img.icons8.com/dusk/48/000000/heart-with-pulse.png" />}
-                                width='100px'
-                                strokeWidth='10' />
-                                <Paragraph strong={true}>Potencial de ação</Paragraph>
-                                
-                            </Col>
-                            <Col >
-
-
-                            <Popover content={content} placement="right"
+                        
+                        <Divider orientation="left" style={{ marginTop: "40px" }}> <Title level={3}>Nível 2: Entendendo o traçado eletrocardiográfico normal</Title></Divider>
+<Popover content={content} placement="right"
 
 trigger="hover">
 <img
@@ -73,53 +58,6 @@ trigger="hover">
     style={{ marginLeft: "250px" }}
 />
 </Popover>
-                            </Col>
-                        </Row>
-
-                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
-                            <Col span={8}>
-                                <Progress
-                                    type="circle"
-                                    percent={20} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
-                                    width='100px'
-                                    strokeColor='#6CB6C9'
-                                    strokeWidth='10' />
-                                <Paragraph strong={true}>Geração/ <br />
-                                    Formação e Condução/<br />
-                                    Propagação do estímulo</Paragraph>
-                            </Col>
-                            <Col span={8}></Col>
-                            <Col span={8}><Progress
-                                type="circle"
-                                percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
-                                width='100px'
-                                strokeWidth='10' />
-                                <Paragraph strong={true} >Células cardíacas: <br />
-                                    elétricas <br />
-                                    (rápidas e lentas)<br />
-                                    e miocárdicas</Paragraph>
-                            </Col>
-                        </Row>
-
-
-                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex">
-                            <Col span={8}></Col>
-                            <Col span={8}>
-                                <Progress
-                                    type="circle"
-                                    percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
-                                    width='100px'
-                                    strokeWidth='10' />
-                                <Paragraph strong={true}>Bases da <br />
-                                    eletrocardiografian<br />
-                                    (teoria do dipolo, vetores e ondas)</Paragraph>
-                            </Col>
-                            <Col span={8}></Col>
-                        </Row>
-
-
-                        <Divider orientation="left" style={{ marginTop: "40px" }}> <Title level={3}>Nível 2: Entendendo o traçado eletrocardiográfico normal</Title></Divider>
-
 
                         <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex">
                             <Col span={8}></Col>
@@ -179,6 +117,67 @@ trigger="hover">
                             </Col>
                             <Col span={6}></Col>
                         </Row>
+<Divider orientation="left"> <Title level={3}>Nível 1: Eletrofisiologia cardíaca</Title></Divider>
+
+                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
+                            <Col >     
+                            </Col>
+                            <Col span={8}><Progress
+                                type="circle"
+                                percent={100} format={() => <img src="https://img.icons8.com/dusk/48/000000/heart-with-pulse.png" />}
+                                width='100px'
+                                strokeWidth='10' />
+                                <Paragraph strong={true}>Potencial de ação</Paragraph>
+                                
+                            </Col>
+                            <Col >
+
+
+                            
+                            </Col>
+                        </Row>
+
+                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
+                            <Col span={8}>
+                                <Progress
+                                    type="circle"
+                                    percent={20} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
+                                    width='100px'
+                                    strokeColor='#6CB6C9'
+                                    strokeWidth='10' />
+                                <Paragraph strong={true}>Geração/ <br />
+                                    Formação e Condução/<br />
+                                    Propagação do estímulo</Paragraph>
+                            </Col>
+                            <Col span={8}></Col>
+                            <Col span={8}><Progress
+                                type="circle"
+                                percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
+                                width='100px'
+                                strokeWidth='10' />
+                                <Paragraph strong={true} >Células cardíacas: <br />
+                                    elétricas <br />
+                                    (rápidas e lentas)<br />
+                                    e miocárdicas</Paragraph>
+                            </Col>
+                        </Row>
+
+
+                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex">
+                            <Col span={8}></Col>
+                            <Col span={8}>
+                                <Progress
+                                    type="circle"
+                                    percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
+                                    width='100px'
+                                    strokeWidth='10' />
+                                <Paragraph strong={true}>Bases da <br />
+                                    eletrocardiografian<br />
+                                    (teoria do dipolo, vetores e ondas)</Paragraph>
+                            </Col>
+                            <Col span={8}></Col>
+                        </Row>
+
 
 
                         <Divider orientation="left" style={{ marginTop: "80px" }}><Title level={3}>Nível 3: Interpretação dos traçados anormais</Title></Divider>

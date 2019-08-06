@@ -23,16 +23,7 @@ const steps = [
   {
     title: "Vídeo sobre derivações: ",
     content: (
-      <div>
-        <p />
-        <a target="_blank" rel="noopener noreferrer">
-          <iframe
-            frameborder="0"
-            height="300"
-            src="https://www.youtube.com/embed/kwLbSx9BNbU?controls=0&showinfo=0"
-          />
-        </a>
-        <Popover content={content} placement="top"
+      <div><Popover content={content} placement="top"
 
           trigger="hover">
           <img
@@ -42,6 +33,16 @@ const steps = [
             style={{ marginLeft: "250px" }}
           />
         </Popover>
+        <p />
+        <a target="_blank" rel="noopener noreferrer">
+          <iframe
+            frameborder="0"
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/kwLbSx9BNbU?controls=0&showinfo=0"
+          />
+        </a>
+        
       </div>
     )
   },
@@ -53,6 +54,7 @@ const steps = [
         <a target="_blank" rel="noopener noreferrer">
           <iframe
             frameborder="0"
+            width="100%"
             height="300"
             src="https://www.youtube.com/embed/toco_cGs11M?controls=0&showinfo=0"
           />
@@ -68,6 +70,7 @@ const steps = [
         <a target="_blank" rel="noopener noreferrer">
           <iframe
             frameborder="0"
+            width="100%"
             height="300"
             src="https://www.youtube.com/embed/TFVY7Nnqy28?controls=0&showinfo=0"
           />
@@ -83,6 +86,7 @@ const steps = [
         <a target="_blank" rel="noopener noreferrer">
           <iframe
             frameborder="0"
+            width="100%"
             height="300"
             src="https://www.youtube.com/embed/_CCUWdAaQoA?controls=0&showinfo=0"
           />
@@ -98,6 +102,7 @@ const steps = [
         <a target="_blank" rel="noopener noreferrer">
           <iframe
             frameborder="0"
+            width="100%"
             height="300"
             src="https://www.youtube.com/embed/mzz5I-K7Z0s?controls=0&showinfo=0"
           />

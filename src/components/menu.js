@@ -84,7 +84,7 @@ export default class Primary extends React.Component {
             </SubMenu>
             <Menu.Item key="13">
               <Icon type="star" style={{ fontSize: "20px" }} />
-              <span>Avaliar o TUTOR DE ECG</span>
+              <span>Avaliar o ECG TUTOR</span>
               <Link to="./Avaliation" />
             </Menu.Item>
             <SubMenu

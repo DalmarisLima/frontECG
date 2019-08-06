@@ -32,7 +32,7 @@ export default class Tutorial extends React.Component {
                                 src={cora}
                                 className="Cora"
                                 alt="cora"
-                                style={{ marginLeft: "250px" }}
+                                style={{ marginLeft: "5px" }}
                             />
                         </Popover>
 
