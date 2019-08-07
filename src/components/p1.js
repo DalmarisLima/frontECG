@@ -239,7 +239,7 @@ const steps = [
                   Repolarização atrial.
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={success2}>
+                  <Button type="default" onClick={info3}>
                     C
                   </Button>
                   Condução do estímulo através do nodo atrioventricular.
@@ -253,7 +253,7 @@ const steps = [
                 </Col>
 
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info3}>
+                  <Button type="default" onClick={success2}>
                     E
                   </Button>
                   Repolarização ventricular.

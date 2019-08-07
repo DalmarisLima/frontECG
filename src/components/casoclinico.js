@@ -273,7 +273,7 @@ const steps = [
             <RadioGroup buttonStyle="solid">
               <Row>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={success}>
+                  <Button type="default" onClick={info5}>
                     A
                   </Button>
                   Orientação para procurar um cardiologista devido à FC alterada
@@ -286,7 +286,7 @@ const steps = [
                   Tranquilizaria o paciente, pois a FC está normal
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={info5}>
+                  <Button type="default" onClick={success}>
                     C
                   </Button>
                   Tranquilizaria o paciente, pois apesar da FC estar alterada,

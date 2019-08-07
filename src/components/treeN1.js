@@ -44,27 +44,84 @@ function PositionedTooltips(props) {
                 type="inner"
                 title={<Title level={4}>Árvore do Conhecimento</Title>}
             >
+                <Divider orientation="left"> <Title level={3}>Nível 1: Eletrofisiologia cardíaca</Title></Divider>
+
+                <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
+                    <Col >
+                    </Col>
+                    <Col span={8}><Progress
+                        type="circle"
+                        percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
+                        width='100px'
+                        strokeWidth='10' />
+                        <Paragraph strong={true}>Potencial de ação</Paragraph>
+
+                    </Col>
+                    <Col >
+                    <Popover content={content} placement="right"
+
+                            trigger="hover">
+                            <img
+                                src={cora}
+                                className="Cora"
+                                alt="cora"
+                                style={{ marginLeft: "250px" }}
+                            />
+                        </Popover>
+                    </Col>
+                </Row>
+
+                <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
+                    <Col span={8}>
+                        <Progress
+                            type="circle"
+                            percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
+                            width='100px'
+                            strokeColor='#6CB6C9'
+                            strokeWidth='10' />
+                        <Paragraph strong={true}>Geração/ <br />
+                            Formação e Condução/<br />
+                            Propagação do estímulo</Paragraph>
+                    </Col>
+                    <Col span={8}></Col>
+                    <Col span={8}><Progress
+                        type="circle"
+                        percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
+                        width='100px'
+                        strokeWidth='10' />
+                        <Paragraph strong={true} >Células cardíacas: <br />
+                            elétricas <br />
+                            (rápidas e lentas)<br />
+                            e miocárdicas</Paragraph>
+                    </Col>
+                </Row>
+
+
+                <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex">
+                    <Col span={8}></Col>
+                    <Col span={8}>
+                        <Progress
+                            type="circle"
+                            percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
+                            width='100px'
+                            strokeWidth='10' />
+                        <Paragraph strong={true}>Bases da <br />
+                            eletrocardiografian<br />
+                            (teoria do dipolo, vetores e ondas)</Paragraph>
+                    </Col>
+                    <Col span={8}></Col>
+                </Row>
                 <Row>
                     <Col span={24}>
-                        
-                        <Divider orientation="left" style={{ marginTop: "40px" }}> <Title level={3}>Nível 2: Entendendo o traçado eletrocardiográfico normal</Title></Divider>
-<Popover content={content} placement="right"
 
-trigger="hover">
-<img
-    src={cora}
-    className="Cora"
-    alt="cora"
-    style={{ marginLeft: "250px" }}
-/>
-</Popover>
+                        <Divider orientation="left" style={{ marginTop: "40px" }}> <Title level={3}>Nível 2: Entendendo o traçado eletrocardiográfico normal</Title></Divider>
 
                         <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex">
                             <Col span={8}></Col>
                             <Col span={8}>
                                 <Progress
                                     type="circle"
-                                    percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
+                                    percent={100} format={() => <img src="https://img.icons8.com/dusk/48/000000/heart-with-pulse.png" />}
                                     width='100px'
                                     strokeWidth='10' />
                                 <Paragraph strong={true}>Derivações do ECG e <br />
@@ -116,66 +173,6 @@ trigger="hover">
                                     o eixo e a frequência</Paragraph>
                             </Col>
                             <Col span={6}></Col>
-                        </Row>
-<Divider orientation="left"> <Title level={3}>Nível 1: Eletrofisiologia cardíaca</Title></Divider>
-
-                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
-                            <Col >     
-                            </Col>
-                            <Col span={8}><Progress
-                                type="circle"
-                                percent={100} format={() => <img src="https://img.icons8.com/dusk/48/000000/heart-with-pulse.png" />}
-                                width='100px'
-                                strokeWidth='10' />
-                                <Paragraph strong={true}>Potencial de ação</Paragraph>
-                                
-                            </Col>
-                            <Col >
-
-
-                            
-                            </Col>
-                        </Row>
-
-                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex" justify="center">
-                            <Col span={8}>
-                                <Progress
-                                    type="circle"
-                                    percent={20} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
-                                    width='100px'
-                                    strokeColor='#6CB6C9'
-                                    strokeWidth='10' />
-                                <Paragraph strong={true}>Geração/ <br />
-                                    Formação e Condução/<br />
-                                    Propagação do estímulo</Paragraph>
-                            </Col>
-                            <Col span={8}></Col>
-                            <Col span={8}><Progress
-                                type="circle"
-                                percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
-                                width='100px'
-                                strokeWidth='10' />
-                                <Paragraph strong={true} >Células cardíacas: <br />
-                                    elétricas <br />
-                                    (rápidas e lentas)<br />
-                                    e miocárdicas</Paragraph>
-                            </Col>
-                        </Row>
-
-
-                        <Row style={{ marginLeft: "200px", marginTop: "80px" }} type="flex">
-                            <Col span={8}></Col>
-                            <Col span={8}>
-                                <Progress
-                                    type="circle"
-                                    percent={0} format={() => <img src="https://img.icons8.com/wired/48/000000/heart-with-pulse.png" />}
-                                    width='100px'
-                                    strokeWidth='10' />
-                                <Paragraph strong={true}>Bases da <br />
-                                    eletrocardiografian<br />
-                                    (teoria do dipolo, vetores e ondas)</Paragraph>
-                            </Col>
-                            <Col span={8}></Col>
                         </Row>
 
 

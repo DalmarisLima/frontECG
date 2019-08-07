@@ -9,7 +9,7 @@ const content = (
 
     <Title  level={4}><p>Seus acertos serão convertidos em pontos e acumulados progressivamente.</p>
     <p> Se for de sua vontade participar, você poderá visualizar sua posição no ranking em relação</p>
-    <p> aos outros participantes do ECG tutor. Agora clique em Conquista.</p>
+    <p> aos outros participantes do ECG tutor. Agora clique em CONQUISTAS.</p>
     </Title>
   </div>
 );

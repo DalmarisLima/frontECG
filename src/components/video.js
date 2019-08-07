@@ -1,5 +1,5 @@
 import React from "react";
-import { Steps, Button, Radio, Icon, Typography, Popover } from "antd";
+import { Steps, Button, Radio, Icon, Typography, Popover, Row, Col } from "antd";
 import cora from "./cora.svg";
 
 const { Title } = Typography;
@@ -7,12 +7,16 @@ const { Title } = Typography;
 
 const content = (
   <div>
-    <Title level={4}>O link para os vídeos citados no material de texto sobre Eletrofisiologia Cardíaca estão disponíveis aqui. 
-</Title>
+    <Title level={4}>
+      <p>O link para os vídeos citados no material de texto sobre</p>
+      <p>Eletrofisiologia Cardíaca estão disponíveis aqui.</p>
+    </Title>
 
 
-    <Title level={4}>Quando você achar que está pronto, clica em PRATICAR para responder às 3 questões sobre o assunto!
-</Title>
+    <Title level={4}>
+      <p>Quando você achar que está pronto, </p>
+      <p> clica em PRATICAR para responder às 3 questões sobre o assunto!</p>
+    </Title>
   </div>
 );
 
@@ -23,26 +27,34 @@ const steps = [
   {
     title: "Vídeo sobre derivações: ",
     content: (
-      <div><Popover content={content} placement="top"
+      <div>
 
-          trigger="hover">
-          <img
-            src={cora}
-            className="Cora"
-            alt="cora"
-            style={{ marginLeft: "250px" }}
-          />
-        </Popover>
-        <p />
+        <Row>
+          <Col span={12}>
+            <Popover content={content} placement="right"
+
+              trigger="hover">
+              <img
+                src={cora}
+                className="Cora"
+                alt="cora"
+                style={{ marginLeft: "250px" }}
+              />
+            </Popover>
+
+          </Col>
+          <Col span={12}>
+          </Col>
+        </Row>
         <a target="_blank" rel="noopener noreferrer">
           <iframe
             frameborder="0"
             width="100%"
-            height="300"
+            height="500"
             src="https://www.youtube.com/embed/kwLbSx9BNbU?controls=0&showinfo=0"
           />
         </a>
-        
+
       </div>
     )
   },
@@ -50,12 +62,11 @@ const steps = [
     title: "Vídeo sobre triângulo de Einthoven:",
     content: (
       <div>
-        <p />
         <a target="_blank" rel="noopener noreferrer">
           <iframe
             frameborder="0"
             width="100%"
-            height="300"
+            height="500"
             src="https://www.youtube.com/embed/toco_cGs11M?controls=0&showinfo=0"
           />
         </a>
@@ -71,7 +82,7 @@ const steps = [
           <iframe
             frameborder="0"
             width="100%"
-            height="300"
+            height="500"
             src="https://www.youtube.com/embed/TFVY7Nnqy28?controls=0&showinfo=0"
           />
         </a>
@@ -87,7 +98,7 @@ const steps = [
           <iframe
             frameborder="0"
             width="100%"
-            height="300"
+            height="500"
             src="https://www.youtube.com/embed/_CCUWdAaQoA?controls=0&showinfo=0"
           />
         </a>
@@ -103,7 +114,7 @@ const steps = [
           <iframe
             frameborder="0"
             width="100%"
-            height="300"
+            height="500"
             src="https://www.youtube.com/embed/mzz5I-K7Z0s?controls=0&showinfo=0"
           />
         </a>
