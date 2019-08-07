@@ -88,7 +88,6 @@ function success2() {
           Parabéns!!!
    Você não é mais um bebê!
 Seu avatar evoluiu! </Title>
-
       </div>
     ),
     next() {
@@ -299,17 +298,17 @@ export default class Ques extends React.Component {
         </Steps>
         <div className="steps-content">{steps[current].content}</div>
         <div className="steps-action">
+
+        {current > 0 && (
+            <Button onClick={() => this.previous()}>
+              Pergunta Anterior
+            </Button>
+          )}
           {current < steps.length - 1 && (
-            <Button type="primary" onClick={() => this.next()}>
+            <Button style={{ marginLeft: 8 }} type="primary" onClick={() => this.next()}>
               Próxima Pergunta
             </Button>                
             
-          )          }
-           {current > 0 && (
-             <br/>
-            <Button style={{ marginLeft: 8 }} onClick={() => this.previous()}>
-              Pergunta Anterior
-            </Button>
           )}
         </div>
       </div>

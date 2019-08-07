@@ -8,7 +8,8 @@ import {
   Col,
   Modal,
   Popover,
-  Typography
+  Typography,
+  Icon
 } from "antd";
 import cora from "./cora.svg";
 
@@ -17,7 +18,11 @@ const { Title } = Typography;
 
 const content = (
   <div>
-    <Title level={4}>Aqui, temos uma simulação de um caso clínico real e relato do paciente.  Você pode tentar ajudá-lo?</Title>
+    <Title level={4}>
+      <p>Aqui, temos uma simulação de um </p>
+      <p>caso clínico real e relato do paciente.</p>
+      <p>Você pode tentar ajudá-lo?</p>
+    </Title>
   </div>
 );
 
@@ -45,6 +50,24 @@ const dica5 = () => {
 function success() {
   Modal.success({
     title: "Parabéns! Resposta Correta!",
+    onOk() { }
+  });
+}
+
+function success2() {
+  Modal.success({
+    content: (
+      <div>
+        <img src="https://img.icons8.com/dusk/64/000000/trophy.png" />
+        <Title level={4}>Parebéns!!! Voce conquistou seu primeiro troféu! Que tal agora Avaliar o ECG Tutor? </Title>
+        <Title level={4}>Clique em <Icon type="star" style={{ fontSize: "20px" }} />
+          <span>Avaliar o ECG TUTOR</span> </Title>
+      </div>
+    ),
+    next() {
+      const current = this.state.current + 1;
+      this.setState({ current });
+    },
     onOk() { }
   });
 }
@@ -93,14 +116,14 @@ const steps = [
         <br />
         <Row>
           <Col span={12}>
-          <a target="_blank" rel="noopener noreferrer">
-          <iframe
-            frameborder="0"
-            width="100%"
-            height="500"
-            src="https://firebasestorage.googleapis.com/v0/b/ecgfront-b11dd.appspot.com/o/WhatsApp%20Video%202019-08-07%20at%2010.29.21.mp4?alt=media&token=effb355b-9699-4621-8b0c-31316969ec38"
-          />
-        </a>
+            <a target="_blank" rel="noopener noreferrer">
+              <iframe
+                frameborder="0"
+                width="100%"
+                height="500"
+                src="https://firebasestorage.googleapis.com/v0/b/ecgfront-b11dd.appspot.com/o/WhatsApp%20Video%202019-08-07%20at%2010.29.21.mp4?alt=media&token=effb355b-9699-4621-8b0c-31316969ec38"
+              />
+            </a>
             <p>
               Identificação: R. A. S., 33 anos, solteiro, empresário <br />
               Cenário: consultório médico <br />
@@ -108,15 +131,15 @@ const steps = [
               medicamento, uso de drogas ilícitas, cirurgias, traumas ou
               hemotransfusão.
           <br /> Ao examiná-lo, você nota bom estado geral, eupneico, hidratado,
-                    corado, afebril. Exame neurológico, respiratório, cardiovascular e
-                    abdominal normais.
+                            corado, afebril. Exame neurológico, respiratório, cardiovascular e
+                            abdominal normais.
           <br /> O ECG trazido pelo paciente está exibido abaixo:
           <br />
               <img src="https://www.health-tutor.com/files/content/ECG/Sinus_bradycardia_ecg.jpg" />
             </p>
           </Col>
           <Col>
-            <Popover content={content} placement="top"
+            <Popover content={content} placement="left"
               trigger="hover">
               <img
                 src={cora}
@@ -294,7 +317,7 @@ const steps = [
                   Tranquilizaria o paciente, pois a FC está normal
                 </Col>
                 <Col span={24} style={{ marginTop: "15px" }}>
-                  <Button type="default" onClick={success}>
+                  <Button type="default" onClick={success2}>
                     C
                   </Button>
                   Tranquilizaria o paciente, pois apesar da FC estar alterada,
@@ -317,7 +340,7 @@ export default class CasoClinico extends React.Component {
       current: 0
     };
   }
-  previous(){
+  previous() {
     const current = this.state.current - 1;
     this.setState({ current });
   }
@@ -336,14 +359,14 @@ export default class CasoClinico extends React.Component {
         </Steps>
         <div className="steps-content">{steps[current].content}</div>
         <div className="steps-action">
-          {current < steps.length - 1 && (
-            <Button type="primary" onClick={() => this.next()}>
-              Próxima etapa
+          {current > 0 && (
+            <Button onClick={() => this.previous()}>
+              Etapa Anterior
             </Button>
           )}
-          {current > 0 && (
-            <Button style={{ marginLeft: 8 }} onClick={() => this.previous()}>
-              Etapa Anterior
+          {current < steps.length - 1 && (
+            <Button style={{ marginLeft: 8 }} type="primary" onClick={() => this.next()}>
+              Próxima etapa
             </Button>
           )}
         </div>
