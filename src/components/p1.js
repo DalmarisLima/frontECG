@@ -104,22 +104,16 @@ const steps = [
     title: "Pergunta 1",
     content: (
       <div>
-        <p>
+        
+        <p><b>
           (MEDELETRO VOL 1) Que derivação avalia a corrente elétrica na direção
           do braço direito para o braço esquerdo?
+          </b>
         </p>
         <Row>
           <Col span={24}>
             <RadioGroup buttonStyle="solid">
-              <Popover content={content} placement="top"
-              trigger="hover">
-              <img
-                src={cora}
-                className="Cora"
-                alt="cora"
-                style={{ marginLeft: "250px" }}
-              />
-            </Popover><Row>
+              <Row>
                 <Col span={24} style={{ marginTop: "15px" }}>
                   <Button type="default" onClick={info}>
                     A
@@ -155,8 +149,20 @@ const steps = [
               </Row>
             </RadioGroup>
             
-          </Col>
+          </Col> 
+          
         </Row>
+        <Col>
+          <Popover content={content} placement="topRight"
+              trigger="hover">
+              <img
+                src={cora}
+                className="Cora"
+                alt="cora"
+                style={{ marginLeft: "800px" }}
+              />
+            </Popover>
+            </Col>
       </div>
     )
   },
@@ -274,7 +280,10 @@ export default class Ques extends React.Component {
       current: 0
     };
   }
-
+  previous(){
+    const current = this.state.current - 1;
+    this.setState({ current });
+  }
   next() {
     const current = this.state.current + 1;
     this.setState({ current });
@@ -293,6 +302,13 @@ export default class Ques extends React.Component {
           {current < steps.length - 1 && (
             <Button type="primary" onClick={() => this.next()}>
               Próxima Pergunta
+            </Button>                
+            
+          )          }
+           {current > 0 && (
+             <br/>
+            <Button style={{ marginLeft: 8 }} onClick={() => this.previous()}>
+              Pergunta Anterior
             </Button>
           )}
         </div>
