@@ -90,9 +90,17 @@ const steps = [
     title: "Caso Clínico: ",
     content: (
       <div>
+        <br />
         <Row>
           <Col span={12}>
-
+          <a target="_blank" rel="noopener noreferrer">
+          <iframe
+            frameborder="0"
+            width="100%"
+            height="500"
+            src="https://firebasestorage.googleapis.com/v0/b/ecgfront-b11dd.appspot.com/o/WhatsApp%20Video%202019-08-07%20at%2010.29.21.mp4?alt=media&token=effb355b-9699-4621-8b0c-31316969ec38"
+          />
+        </a>
             <p>
               Identificação: R. A. S., 33 anos, solteiro, empresário <br />
               Cenário: consultório médico <br />
@@ -309,7 +317,10 @@ export default class CasoClinico extends React.Component {
       current: 0
     };
   }
-
+  previous(){
+    const current = this.state.current - 1;
+    this.setState({ current });
+  }
   next() {
     const current = this.state.current + 1;
     this.setState({ current });
@@ -328,6 +339,11 @@ export default class CasoClinico extends React.Component {
           {current < steps.length - 1 && (
             <Button type="primary" onClick={() => this.next()}>
               Próxima etapa
+            </Button>
+          )}
+          {current > 0 && (
+            <Button style={{ marginLeft: 8 }} onClick={() => this.previous()}>
+              Etapa Anterior
             </Button>
           )}
         </div>

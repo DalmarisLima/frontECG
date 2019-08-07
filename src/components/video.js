@@ -129,7 +129,10 @@ export default class Video extends React.Component {
       current: 0
     };
   }
-
+  previous(){
+    const current = this.state.current - 1;
+    this.setState({ current });
+  }
   next() {
     const current = this.state.current + 1;
     this.setState({ current });
@@ -148,6 +151,11 @@ export default class Video extends React.Component {
           {current < steps.length - 1 && (
             <Button type="primary" onClick={() => this.next()}>
               Próximo vídeo
+            </Button>
+          )}
+          {current > 0 && (
+            <Button style={{ marginLeft: 8 }} onClick={() => this.previous()}>
+              Vídeo Anterior
             </Button>
           )}
         </div>
