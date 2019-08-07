@@ -22,7 +22,7 @@ const content = (
 const tablis = [
   {
     key: "tab1",
-    tab: "Feed Notícias"
+    tab: "Início"
   },
   {
     key: "tab2",
