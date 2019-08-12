@@ -9,13 +9,18 @@ const { Title } = Typography;
 const content = (
 
   <div>
-    <Title level={4}> <p>O ECG tutor é um sistema com inteligência artificial capaz de</p>
-      <p>individualizar seu aprendizado, além de conter tecnologia</p>
-      <p>de gamificação, para que você se sinta engajado e motivado com seus</p>
-      <p>estudos. O curso é composto por etapas, sendo </p>
-      <p>possível desbloquear a próxima etapa apenas após concluir a anterior.</p>
-      <p>Inicialmente, seu Avatar ainda é um bebê, mas poderá evoluir após a</p>
-      <p> conclusão da primeira fase.</p></Title>
+    <Title level={4}> <p>
+      <p>O ECG Tutor é um sistema com inteligência artificial capaz de</p>
+      <p>individualizar seu aprendizado, além de conter tecnologia de</p>
+      <p>gamificação, para que você se sinta engajado e motivado com</p>
+      <p>seus estudos.</p>
+      <p> Na verdade, O ECG tutor ainda não está pronto.</p> 
+      <p>Estamos na fase de construção e você está navegando</p>
+      <p>agora nos protótipos inicias. Eu sou a Cora e estou aqui</p> 
+      <p>para ajudar você a navegar dando todas as instruções.</p>
+      <p>Para começar, clique em FEED NOTÍCIAS.</p>
+  
+    </p></Title>
   </div>
 );
 

@@ -7,10 +7,11 @@ const { Title } = Typography;
 
 const content = (
     <div>
-        <Title level={4}><p>Aqui você tem acesso a um resumo sobre sua utilização do material de estudo.</p>
-            <p>Nosso Tuor chegou ao fim. Espero que tenha gostado, agora clique em <Icon type="star" style={{ fontSize: "20px" }} />
-                <span>Avaliar o TUTOR DE ECG e responda o questionario.</span></p>
-            <p>Até Logo!</p> </Title>
+        <Title level={4}>
+            <p>Aqui você tem acesso a um resumo sobre sua utilização do material de estudo.</p>
+            <p>Nosso tour chegou ao fim! Obrigada por visitar o ECG Tutor! Agora você já pode avaliá-lo.</p>
+            <p> É só clicar no ícone AVALIAR O ECG TUTOR e responder ao questionário.</p>
+        </Title>
     </div>
 );
 

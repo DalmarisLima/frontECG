@@ -8,14 +8,11 @@ const { Title } = Typography;
 const content = (
   <div>
     <Title level={4}>
-      <p>O link para os vídeos citados no material de texto sobre</p>
-      <p>Eletrofisiologia Cardíaca estão disponíveis aqui.</p>
-    </Title>
+    <p>O link para os vídeos citados no material de texto sobre</p> 
+    <p>Traçado Eletrocardiográfico Normal estão disponíveis aqui.</p> 
+    <p>Quando você achar que está pronto, clica em PRATICAR para</p> 
+    <p>responder às 3 questões sobre o assunto!</p>
 
-
-    <Title level={4}>
-      <p>Quando você achar que está pronto, </p>
-      <p> clica em PRATICAR para responder às 3 questões sobre o assunto!</p>
     </Title>
   </div>
 );

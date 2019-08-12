@@ -59,7 +59,7 @@ function success2() {
     content: (
       <div>
         <img src="https://img.icons8.com/dusk/64/000000/trophy.png" />
-        <Title level={4}>Parebéns!!! Voce conquistou seu primeiro troféu! Que tal agora Avaliar o ECG Tutor? </Title>
+        <Title level={4}>Parabéns!!! Você conquistou seu primeiro troféu! Que tal agora Avaliar o ECG Tutor? </Title>
         <Title level={4}>Clique em <Icon type="star" style={{ fontSize: "20px" }} />
           <span>Avaliar o ECG TUTOR</span> </Title>
       </div>
@@ -127,14 +127,13 @@ const steps = [
             <p>
               Identificação: R. A. S., 33 anos, solteiro, empresário <br />
               Cenário: consultório médico <br />
-              Queixa: assintomático O paciente nega comorbidades, uso de
-              medicamento, uso de drogas ilícitas, cirurgias, traumas ou
-              hemotransfusão.
-          <br /> Ao examiná-lo, você nota bom estado geral, eupneico, hidratado,
-                            corado, afebril. Exame neurológico, respiratório, cardiovascular e
-                            abdominal normais.
-          <br /> O ECG trazido pelo paciente está exibido abaixo:
-          <br />
+              Queixa: assintomático <br/>
+              Antecedentes: O paciente nega comorbidades, uso de medicamento, uso de drogas ilícitas, cirurgias, traumas ou hemotransfusão.
+
+          <br /> Exame físico: ao examiná-lo, você nota bom estado geral, eupneico, hidratado, corado, afebril. Exame neurológico, respiratório, cardiovascular e abdominal normais.
+          <br />O ECG trazido pelo paciente está exibido abaixo:
+
+          
               <img src="https://www.health-tutor.com/files/content/ECG/Sinus_bradycardia_ecg.jpg" />
             </p>
           </Col>

@@ -9,10 +9,13 @@ const { Title } = Typography;
 
 const content = (
     <div>
-       <Title level={4}>Na página inicial é possivel acessar  as últimas notícias de todos os usuários do ECG Tutor</Title>
+        <Title level={4}>
+            <p> No FEED é possível acessar as últimas notícias de </p>
+            <p>todos os usuários do ECG Tutor.</p>
+            <p>Agora que já viu as últimas novidades,</p>
+            <p>seria interessante acessar o RANKING. Clica lá!</p>
+        </Title>
 
-        
-        <Title level ={4}><p>Agora que já viu as últimas novidades, seria interessante acessar o <Icon type="trophy" style={{ fontSize: "20px" }} /> RANKING. Clica lá! </p></Title>
     </div>
 );
 
@@ -161,9 +164,9 @@ export default class Feed extends React.Component {
                                 </Row>
                             </Timeline>
                         </Col>
-                        <Col span={2}> 
+                        <Col span={2}>
                             <Popover content={content} placement="right"
-                                
+
                                 trigger="hover">
                                 <img
                                     src={cora}
