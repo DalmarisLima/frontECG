@@ -22,10 +22,13 @@ const { Title } = Typography;
 
 const content = (
   <div>
-    <Title level={4}>Se você acertar as 3 questões sobre Eletrofisiologia Cardíaca, seu Avatar poderá evoluir.
-Vamos tentar?
+    <Title level={4}>
+      <p>Se você acertar as 3 questões</p>
+      <p>sobre Eletrofisiologia Cardíaca, </p>
+      <p> seu Avatar poderá evoluir.</p>
+      <p>Vamos tentar?</p>
 
-</Title>
+    </Title>
 
   </div>
 );
@@ -85,16 +88,17 @@ function success2() {
       <div>
         <Evol />
         <Title level={4}>
-          Parabéns!!!
-   Você não é mais um bebê!
-Seu avatar evoluiu! </Title>
+          Agora que seu Avatar evoluiu,
+          você está pronto para resolver o
+          Caso Clínico! Vamos lá?
+ </Title>
       </div>
     ),
     next() {
       const current = this.state.current + 1;
       this.setState({ current });
     },
-    onOk() { }
+    onOk() { 'glgblkhgby' }
   });
 }
 
@@ -103,17 +107,17 @@ const steps = [
     title: "Pergunta 1",
     content: (
       <div>
-        
+
         <p><b>
           (MEDELETRO VOL 1) Que derivação avalia a corrente elétrica na direção
           do braço direito para o braço esquerdo?
           </b>
         </p>
         <Row>
-          <Col span={24}>
+          <Col span={4}>
             <RadioGroup buttonStyle="solid">
               <Row>
-                <Col span={24} style={{ marginTop: "15px" }}>
+                <Col span={12} style={{ marginTop: "15px" }}>
                   <Button type="default" onClick={info}>
                     A
                   </Button>
@@ -147,21 +151,21 @@ const steps = [
                 </Col>
               </Row>
             </RadioGroup>
-            
-          </Col> 
-          
+
+          </Col>
+
         </Row>
-        <Col>
+        <Col span={2}>
           <Popover content={content} placement="topRight"
-              trigger="hover">
-              <img
-                src={cora}
-                className="Cora"
-                alt="cora"
-                style={{ marginLeft: "800px" }}
-              />
-            </Popover>
-            </Col>
+            trigger="hover">
+            <img
+              src={cora}
+              className="Cora"
+              alt="cora"
+              style={{ marginLeft: "800px" }}
+            />
+          </Popover>
+        </Col>
       </div>
     )
   },
@@ -279,7 +283,7 @@ export default class Ques extends React.Component {
       current: 0
     };
   }
-  previous(){
+  previous() {
     const current = this.state.current - 1;
     this.setState({ current });
   }
@@ -299,7 +303,7 @@ export default class Ques extends React.Component {
         <div className="steps-content">{steps[current].content}</div>
         <div className="steps-action">
 
-        {current > 0 && (
+          {current > 0 && (
             <Button onClick={() => this.previous()}>
               Pergunta Anterior
             </Button>
@@ -307,8 +311,8 @@ export default class Ques extends React.Component {
           {current < steps.length - 1 && (
             <Button style={{ marginLeft: 8 }} type="primary" onClick={() => this.next()}>
               Próxima Pergunta
-            </Button>                
-            
+            </Button>
+
           )}
         </div>
       </div>
