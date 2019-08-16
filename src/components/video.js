@@ -8,10 +8,10 @@ const { Title } = Typography;
 const content = (
   <div>
     <Title level={4}>
-    <p>O link para os vídeos citados no material de texto sobre</p> 
-    <p>Traçado Eletrocardiográfico Normal estão disponíveis aqui.</p> 
-    <p>Quando você achar que está pronto, clica em PRATICAR para</p> 
-    <p>responder às 3 questões sobre o assunto!</p>
+      <p>O link para os vídeos citados no material de texto sobre</p>
+      <p>Traçado Eletrocardiográfico Normal estão disponíveis aqui.</p>
+      <p>Quando você achar que está pronto, clica em PRATICAR para</p>
+      <p>responder às 3 questões sobre o assunto!</p>
 
     </Title>
   </div>
@@ -25,10 +25,20 @@ const steps = [
     title: "Vídeo sobre derivações: ",
     content: (
       <div>
-
+        <br/> 
         <Row>
           <Col span={12}>
-            <Popover content={content} placement="right"
+            <a target="_blank" rel="noopener noreferrer">
+              <iframe
+                frameborder="0"
+                width="100%"
+                height="300"
+                src="https://www.youtube.com/embed/kwLbSx9BNbU?controls=0&showinfo=0"
+              />
+            </a>
+          </Col>
+          <Col span={12}>
+            <Popover content={content} placement="left"
 
               trigger="hover">
               <img
@@ -40,18 +50,7 @@ const steps = [
             </Popover>
 
           </Col>
-          <Col span={12}>
-          </Col>
         </Row>
-        <a target="_blank" rel="noopener noreferrer">
-          <iframe
-            frameborder="0"
-            width="100%"
-            height="500"
-            src="https://www.youtube.com/embed/kwLbSx9BNbU?controls=0&showinfo=0"
-          />
-        </a>
-
       </div>
     )
   },
@@ -126,7 +125,7 @@ export default class Video extends React.Component {
       current: 0
     };
   }
-  previous(){
+  previous() {
     const current = this.state.current - 1;
     this.setState({ current });
   }

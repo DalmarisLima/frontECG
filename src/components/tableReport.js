@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Card, Typography, Row, Col, Popover, Icon } from 'antd';
+import { Table, Card, Typography, Row, Col, Popover, Progress } from 'antd';
 import cora from "./cora.svg";
 
 const { Title } = Typography;
@@ -32,10 +32,10 @@ const columns = [{
 
 const data = [{
     key: '1',
-    texto: 'Entendendo o traço eletrocardiografico Normal',
-    video: '12 Lead ECG Explained, Animation',
-    praticar: 'Praticar Nível 2',
-    caso: 'Caso Clínico Nível 2',
+    texto: <div>Entendendo o traço eletrocardiografico Normal  <Progress type="circle" percent={100} width={30} size={"small"} /> </div>,
+    video: <div>12 Lead ECG Explained, Animation <Progress type="circle" percent={50} width={30} size={"small"} /></div>,
+    praticar: <div>Praticar Nível 2 <Progress type="circle" percent={70} width={30} size={"small"} /></div>,
+    caso: <div>Caso Clínico Nível 2 <Progress type="circle" percent={50} width={30} size={"small"} /></div>,
 }];
 export default class Tabela extends React.Component {
     render() {
