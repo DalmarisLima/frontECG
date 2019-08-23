@@ -60,7 +60,7 @@ function success2() {
       <div>
         <img src="https://img.icons8.com/dusk/64/000000/trophy.png" />
         <Title level={4}>
-          <p>Parabéns!!! Você conquistou seu primeiro troféu! Que tal agora Avaliar o ECG Tutor?</p>
+          <p>Parabéns!!! Você conquistou seu primeiro troféu!</p>
           <p>Agora que resolveu as Questões e o Caso Clínico, você pode acessar os RELATÓRIOS – Nível 2.</p>
           
           </Title>
