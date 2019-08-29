@@ -9,6 +9,7 @@ import Ranking from "../pages/ranking";
 import User from "../components/user";
 import Avaliation from "../pages/avaliation";
 import Evolution from "../components/evolution";
+import logo from "./logo1.svg";
 
 const { Header, Content, Footer } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -16,14 +17,24 @@ const SubMenu = Menu.SubMenu;
 export default class Primary extends React.Component {
   render() {
     return (
-      <Layout>
-        <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+      <Layout className="layout">
+        <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}> 
           <Menu
+          
             theme="dark"
             mode="horizontal"
             defaultSelectedKeys={["1"]}
             style={{ lineHeight: "64px" }}
           >
+            <Menu.Item key ="0">
+            <img
+                src={logo}
+                className="logo"
+                alt="logo"
+              
+               
+               /> 
+            </Menu.Item>
             <Menu.Item key="2">
               <Icon type="home" style={{ fontSize: "20px" }} />
               <span>Início</span>
