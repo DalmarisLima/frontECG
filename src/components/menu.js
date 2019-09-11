@@ -19,6 +19,13 @@ export default class Primary extends React.Component {
     return (
       <Layout className="layout">
         <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}> 
+        <a class="navbar-brand">
+                <img src={logo}
+                className="logo"
+                alt="logo"
+                width="100px" 
+                height="80px">
+                  </img></a>
           <Menu
           
             theme="dark"
@@ -26,15 +33,6 @@ export default class Primary extends React.Component {
             defaultSelectedKeys={["1"]}
             style={{ lineHeight: "64px" }}
           >
-            <Menu.Item key ="0">
-            <img
-                src={logo}
-                className="logo"
-                alt="logo"
-              
-               
-               /> 
-            </Menu.Item>
             <Menu.Item key="2">
               <Icon type="home" style={{ fontSize: "20px" }} />
               <span>Início</span>
